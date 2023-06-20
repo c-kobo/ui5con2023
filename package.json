@@ -1,8 +1,8 @@
 {
-  "name": "teched2022-dt181",
+  "name": "ui5con2023",
   "version": "1.0.0",
-  "description": "CAP flight demo scenario",
-  "repository": "https://github.com/SAP-samples/teched2022-DT181",
+  "description": "Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools",
+  "repository": "https://github.com/c-kobo/ui5con2023",
   "engines": {
     "node": ">=14"
   },
