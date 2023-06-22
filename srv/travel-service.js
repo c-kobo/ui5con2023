@@ -319,7 +319,7 @@ init() {
      */
     this.on("READ", "BookedFlights", async (context, next) => {
       var bookedFlights = await next()
-      if (context.query.SELECT.columns && context.query.SELECT.columns.find(c => c.as === 'CountFlights')) {
+      if (context.query.SELECT.columns && context.query.SELECT.columns.find(c => c.as === 'BookingUUID')) {
         return [...new Set(await (await _readBookedFlightsAllAirlines(bookedFlights.filter(obj => obj.to_Customer_CustomerID != null && obj.AirlineID != null), context)))]       
       }
       return bookedFlights
@@ -335,7 +335,7 @@ init() {
             var airlines = result[1]
             for (const flightsPerAirline of bookings) {
                 var record = {}
-                record.CountFlights = flightsPerAirline.BookedFlights                
+                record.BookingUUID = flightsPerAirline.BookedFlights                
                 record.AirlineID = flightsPerAirline.AirlineID
                 record.to_Customer_CustomerID = each.
                 to_Customer_CustomerID

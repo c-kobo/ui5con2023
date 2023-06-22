@@ -25,26 +25,23 @@ annotate TravelService.Booking with @Capabilities : {
 
 //Exercise 7: Aggregation Capabilities
 annotate TravelService.BookedFlights with @(
-  Aggregation.ApplySupported: {
-    $Type : 'Aggregation.ApplySupportedType',
-    Transformations : [
-        'aggregate',
-        'groupby'
+  Aggregation.CustomAggregate #BookingUUID: 'Edm.Decimal',
+  Aggregation.ApplySupported              : {
+    $Type                 : 'Aggregation.ApplySupportedType',
+    Transformations       : [
+      'aggregate',
+      'groupby'
     ],
-    Rollup : #None,
-    GroupableProperties : [
-        to_Customer_CustomerID, AirlineID
+    Rollup                : #None,
+    GroupableProperties   : [
+      to_Customer_CustomerID,
+      AirlineID
     ],
-    AggregatableProperties : [
-        {
-            $Type : 'Aggregation.AggregatablePropertyType',
-            Property : BookingUUID 
-        },
-    ],
-  },
-  Analytics.AggregatedProperties : [{
-    Name : 'CountFlights',
-    AggregationMethod : 'countdistinct',
-    AggregatableProperty : BookingUUID,
-    ![@Common.Label] : 'Booked Flights per Airline',
-  }]);
+    AggregatableProperties: [{
+      $Type   : 'Aggregation.AggregatablePropertyType',
+      Property: BookingUUID
+    }, ],
+  }
+) {
+  BookingUUID  @Aggregation.default: #COUNTDISTINCT  @Common.Label: 'Booked Flight'
+}
