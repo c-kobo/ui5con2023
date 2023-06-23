@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "axios": "^1.4.0",
-    "cds-plugin-ui5": "0.1.1",
+    "cds-plugin-ui5": "0.1.4",
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
