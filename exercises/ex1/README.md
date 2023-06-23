@@ -75,7 +75,6 @@ In the wizard step **Project Attributes**, add the following attributes to the a
  (This SAPUI5 version has some features required for some of the subsequent exercises to work properly)
 
 - Select **Configure Advanced Options**
-  - Select **Add code assist libraries to your project**
   - Select **Enable TypeScript(Experimental)**
 
 (14) Click ![](./images/image24.png).
