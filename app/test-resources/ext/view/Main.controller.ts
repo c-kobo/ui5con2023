@@ -1,7 +1,7 @@
 import Controller from 'sap/fe/core/PageController';
 import FilterBar from 'sap/fe/macros/filterBar/FilterBarAPI';
 import JSONModel from 'sap/ui/model/json/JSONModel';
-import UI5Event from "sap/ui/base/Event";
+import Event from 'sap/ui/base/Event';
 import GenericTile from 'sap/m/GenericTile';
 import Context from 'sap/ui/model/odata/v4/Context';
 
@@ -52,7 +52,7 @@ export default class Main extends Controller {
     //
     //  }
 
-    public onFiltersChanged(event: UI5Event) : void {
+    public onFiltersChanged(event: Event) : void {
         const filterBar = event.getSource() as FilterBar;
             const mFBConditions = filterBar.getModel("fbConditions");
             if (mFBConditions instanceof JSONModel) {
@@ -60,7 +60,7 @@ export default class Main extends Controller {
             }
     }  
     
-    public onPressed(event: UI5Event) : void {
+    public onPressed(event: Event) : void {
         const oContext = (event.getSource() as GenericTile).getBindingContext();
         if (oContext) {
             const routing = this.getExtensionAPI().getRouting();
