@@ -168,7 +168,6 @@ defined in file **app/field-control.cds** [line 37 ff.](/app/field-control.cds#3
 
 ![](./images/image55.png)
 
-## Exercise 4.3 - Adding a Table Section
 
 We will now add a table section by using the Page Map.
 
@@ -232,9 +231,8 @@ The table is shown below the group section.
 
 ![](./images/image78.png)
 
-
 ## Summary
 
-You've now successfully configured the object page layout by adding group section,  sub sections, and a table section by making usage of the Page Map.
+You've now successfully configured the object page layout by adding group section and sub sections by making usage of the Page Map.
 
-Continue to - [Exercise 5 - Add Micro Chart Table Column](../ex5/README.md)
+Continue to - [Exercise 5 - Adding a Custom Section](../ex5/README.md)
