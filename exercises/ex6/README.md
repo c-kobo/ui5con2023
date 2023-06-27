@@ -77,3 +77,9 @@ Switch to the preview browser tab.\
 (24) On the Object Page, the table now shows the micro chart column.
 
 ![](./images/image36.png)
+
+## Summary
+
+You've now successfully added a micro chart column to the table by using the Page Map.
+
+Continue to - [Exercise 7 - Guided Development: Adding a Chart Building Block](../ex7/README.md)
