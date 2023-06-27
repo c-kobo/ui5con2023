@@ -40,7 +40,7 @@ xmlns:f="sap.f"
                     <Title id="_IDGenTitle1" text="Travel" level="H2" />
                 </f:heading>
                 <f:snappedContent>
-                    <Panel headerText="{i18n>FilterStatus}">
+                    <Panel id="pn1" headerText="{i18n>FilterStatus}">
                         <Text text="{fbConditions>/filtersTextInfo}" class="sapUiTinyMargin" />
                     </Panel>
                 </f:snappedContent>
