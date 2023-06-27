@@ -44,7 +44,6 @@ There are no special requirements to follow the exercises in this repository.
   - [Exercise 4.1 - Add Actions to Object Page Header](/exercises/ex4#exercise-41---add-actions-to-object-page-header)
   - [Exercise 4.2 - Adding Group and Form Sections](/exercises/ex4#exercise-42---adding-group-and-form-sections)
   - [Exercise 4.3 - Adding a Table Section](/exercises/ex4#exercise-43---adding-a-table-section)
-- [Exercise 6 - Page Map: Add Micro Chart Table Column](/exercises/ex5#exercise-5---page-map-add-micro-chart-table-column)
 - [Exercise 5 - Flexible Programming Model: Extending the Object Page with a Custom Section and Building Blocks](/exercises/ex5#exercise-5---flexible-programming-model-extending-the-object-page-with-a-custom-section-and-building-blocks)
   - [Exercise 5.1 Add LineItem annotation via LSP Support](/exercises/ex5#exercise-51-add-lineitem-annotation-via-lsp-support)
   - [Exercise 5.2 Add Custom Section](/exercises/ex5#exercise-52-add-custom-section)
