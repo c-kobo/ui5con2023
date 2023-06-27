@@ -33,7 +33,7 @@ Once your development space has status running, click on the development space n
 
 ## Getting the Sample Scenario
 
-Get the GitHub repository clone Https Url from the repository's [landing page](https://github.com/SAP-samples/teched2022-DT181).\
+Get the GitHub repository clone Https Url from the repository's [landing page](https://github.com/c-kobo/ui5con2023).\
 Click on button **Code**, then click the copy icon.
 
 ![copy link](../ex0/images/00_00_0070.png)

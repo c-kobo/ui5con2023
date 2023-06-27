@@ -77,9 +77,7 @@ entity TravelStatus : CodeList {
   createDeleteHidden: Boolean;
 }
 
-//TechEd extensions
-
-//Exercise 5: Bookings table micro chart
+//Exercise 6: Bookings table micro chart
 extend Booking with {
   criticality    : Integer default 0 @Core.Computed @UI.Hidden; 
   BookedFlights: Integer @Core.Computed;  

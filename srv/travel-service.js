@@ -270,7 +270,7 @@ init() {
 
 
     /**
-     * Exercise 5: Data for Bookings table micro chart
+     * Exercise 6: Data for Bookings table micro chart
      */
      const _readBookings = async (context, each) => {
       return await cds

@@ -235,4 +235,4 @@ The table is shown below the group section.
 
 You've now successfully configured the object page layout by adding group section and sub sections by making usage of the Page Map.
 
-Continue to - [Exercise 5 - Adding a Custom Section](../ex5/README.md)
+Continue to - [Exercise 6 - Adding a Custom Section](../ex5/README.md)

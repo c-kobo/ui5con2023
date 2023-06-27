@@ -40,7 +40,7 @@ Choose the corresponding list entry.
 
 ![](./images/image13.png)
 
-(9) Select folder **teched2022-DT181** and click ![Open](./images/image16.png).
+(9) Select folder **ui5con2023** and click ![Open](./images/image16.png).
 
 ![](./images/image15.png)
 
