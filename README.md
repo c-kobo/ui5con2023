@@ -49,7 +49,7 @@ There are no special requirements to follow the exercises in this repository.
   - [Exercise 5.2 Add Custom Section](/exercises/ex5#exercise-52-add-custom-section)
   - [Exercise 5.3 Use UI5 Language Assistant](/exercises/ex5#exercise-53-use-ui5-language-assistant)
   - [Exercise 5.4 Testing the Table Building Block](/exercises/ex5#exercise-54-testing-the-table-building-block)
-  - [Exercise 6 - Page Map: Add Micro Chart Table Column](/exercises/ex6#exercise-6---page-map-add-micro-chart-table-column)- 
+- [Exercise 6 - Page Map: Add Micro Chart Table Column](/exercises/ex6#exercise-6---page-map-add-micro-chart-table-column)
 - [Exercise 7 - Guided Development: Adding Building Block Chart](/exercises/ex7#exercise-7---guided-development-adding-building-block-chart)
   - [Exercise 7.1 - Use Guided Development to Add Building Block Chart](/exercises/ex7#exercise-71---use-guided-development-to-add-building-block-chart)
   - [Exercise 7.3: Implementing the Chart's Selection Change Handler](/exercises/ex7#exercise-73-implementing-the-charts-selection-change-handler)
