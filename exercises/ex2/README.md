@@ -165,7 +165,9 @@ open drop-downs and select entries for **CDS File** (31), **Service** (32) and *
 ![](./images/image64.png)
 
 (40) Enter the values as shown in the marked fields below.
+Keep the **Binding Context Path Type** set to relative. This makes sure that the metaPath to the LineItem annotation is relative to entity **Travel**.
 The **Aggregation Path** defines where building block table is to be inserted in the target xml view. Defining the **Associated Filter Bar ID** ensures that the filter bar can interact with the table.
+Leave all other values as proposed.
 
 ![](./images/image66.png)
 
