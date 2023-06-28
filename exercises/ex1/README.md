@@ -1,7 +1,7 @@
 # Exercise 1 - Generating an SAP Fiori Elements App
 
 In this exercise, we will create a **Custom App** application leveraging the **Flexible Programming Model** available with SAP Fiori elements floorplans for OData V4.\
-We will enable **typescript support** for the app project, which allows the type safe implementation of custom extensions.
+We will enable **TypeScript support** for the app project, which allows the type safe implementation of custom extensions.
 The scenario is based on the given SAP Cloud Application Programming Model sample service.
 To get started, we will make usage of the **SAP Fiori tools Application Generator**.
 
