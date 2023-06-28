@@ -50,7 +50,7 @@ Open drop-down **CDS File** and select annotation file ![](./images/image12.png)
 
 ![](./images/image17.png)
 
-(10) Click **Add selection field **![](./images/image20.png) twice.
+(10) Click **Add selection field** ![](./images/image20.png) twice.
 
 ![](./images/image19.png)
 
@@ -90,7 +90,7 @@ The aggregation path points to the location in the xml view where the building b
 
 (22) the **Page Editor** shows the added **filter bar building block** for the **Custom Page**.
 
-(23) In the opened file **Main.view.xml**, you can see the inserted **filter bar building block**.\
+(23) In the opened file **Main.view.xml**, you can see the inserted **filter bar building block**.
 
 ![](./images/image38.png)
 
@@ -129,11 +129,11 @@ We will now use another development guide to add a table building block to the c
 
 ![](./images/image50.png)
 
-open drop-downs and select entries for **CDS File** (31), **Service** (32) and **Entity** (33) as shown below.
+Open drop-downs and select entries for **CDS File** (31), **Service** (32) and **Entity** (33) as shown below.
 
 ![](./images/image52.png)
 
-(34) In section **Column Parameters**, open drop-down **Property and select ![](./images/image57.png).
+(34) In section **Column Parameters**, open drop-down **Property** and select ![](./images/image57.png).
 
 ![](./images/image56.png)
 
@@ -215,7 +215,7 @@ Leave all other values as proposed.
 
 (52) Click ![](./images/image88.png).
 
-(53) Open drop-down **Criticality and select ![](./images/image89.png).\
+(53) Open drop-down **Criticality** and select ![](./images/image89.png).\
 The column values are then highlighted with semantic
 colors and icons based on the criticality calculation logic defined for
 the selected property in the back end.
