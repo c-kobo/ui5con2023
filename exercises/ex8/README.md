@@ -11,73 +11,123 @@ Additionally, we will make usage of the **form element building block** in order
 
 ## Exercise 8.1 - Using the Page Map to Add a Controller Extension
 
-(2) In the Application Studio toolbar, click the SAP Fiori icon ![](./images/image4.png).
+(2) In the Application Studio toolbar, click the SAP Fiori icon ![](./images/image3.png).
 
-(3) Click ![](./images/image5.png) to open the Page Map.
+(3) Click ![](./images/image4.png)  to open the Page Map.
 
-(4) On the **object page** tile click icon **Show Controller Extensions** ![](./images/image6.png).
+(4) On the **object page** tile click icon **Show Controller Extensions** ![](./images/image5.png).
 
-![](./images/image3.png)
+![](./images/image2.png)
 
 The Page Map supports the creation of controller extensions overriding all object page controllers globally, or only specific object page instances.\
 We will create a specific controller extension for our travel object page.
 
-(5) Click ![](./images/image8.png).
+(5) Click ![](./images/image7.png).
 
-![](./images/image7.png)
-The **Add Controller Extension Dialog** is opened.\
-(6)  Insert **ObjectPageExtension** as **Controller Name** 
-(7) confirm by clicking ![](./images/image10.png).
+![](./images/image6.png)
 
-![](./images/image9.png)
+The **Add Controller Extension Dialog** is opened.
 
-(8) Click icon **Edit in source code** ![](./images/image12.png) to open up the generated controller extension file.
+(6)  Insert **ObjectPageExtension** as **Controller Name**. (7) Confirm by clicking ![](./images/image9.png).
 
-![](./images/image11.png)
+![](./images/image8.png)
 
-(9) In the controller file, below function **onInit()** add the following code which overrides the **editFlow API** function **onBeforeSave**:
+(8) Open file **app/manifest.json**.\
+(9) Scroll to section **extends** where the controller extension is defined.\
+Please note how the specific instance of the object page controller is overridden:\
+the ID is constructed by using the pattern **YourApplicationID::ComponentID**.
 
-```js
+![](./images/image10.png)
+
+(10) Click **Edit in source code** ![](./images/image13.png) to open up the generated controller extension file.
+
+![](./images/image12.png)
+
+(11) In the controller file, below function **onInit()** add the following code which overrides the **editFlow API** function **onBeforeSave**:
+
+```ts
 ,
-editFlow: {
-	onBeforeSave: function() {
-			//Check on green flights
-			if (!this.getView().getBindingContext().getProperty('GoGreen')){                        	
-				return new Promise(async function(fnResolve, fnReject) {
-					var mSettings = {
-						id: "myFragment",
-						name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets",
-						controller: this.base.getView().getController(),
-						contextPath: "/Travel",
-						initialBindingContext: this.getView().getBindingContext()
-					}
-					var oApproveDialog = await this.base.getExtensionAPI().loadFragment(mSettings);
-					oApproveDialog.setBindingContext(this.getView().getBindingContext());
-					let buttons = oApproveDialog.getButtons();
-					let saveButton = buttons.find(obj => obj.sId === "myFragment--Save");
-					saveButton.attachPress(function() {
-										oApproveDialog.close();
-										oApproveDialog.destroy();										
-										fnResolve();	}.bind(this));
-
-					let cancelButton = buttons.find(obj => obj.sId === "myFragment--Cancel");
-					cancelButton.attachPress(function() {
-										oApproveDialog.close();	
-										oApproveDialog.destroy();									
-										fnReject();	}.bind(this));
-						oApproveDialog.open();
-				}.bind(this));
-			}						
-	}
-}
+		editFlow: {
+			onBeforeSave(this: ObjectPageExtension) {
+				const context = this.base
+					.getExtensionAPI()
+					.getBindingContext() as Context;
+				if (!context.getProperty("GoGreen")) {
+					//void intentionally discards returned floating promise
+					return new Promise<null>((resolve, reject) => { void this.openDialog(resolve, reject, context); })
+				}
+			}
+		}
 ```
 
+![](./images/image14.png)
 
-The override function is called when pressing the Save button on the object page, allowing to intercept the save event and show a custom dialog. \
-
-![](./images/image13.png)
+Function **onBeforeSave** is called when pressing the **Save** button on the object page, allowing to intercept the save event and show a custom dialog.
 
 For more examples on overriding the edit flow API, you can check the [Flexible Programming Model Explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/basicExtensibility).
+
+(12) Let's take care of the syntax error shown at method **openDialog**. Hover the mouse over it. The popover shows that the method does not exist. Click ![](./images/image16.png).
+
+![](./images/image15.png)
+
+(13) Select ![](./images/image18.png).
+
+![](./images/image17.png)
+
+(14) The method stub is created..
+
+![](./images/image19.png)
+
+(15) Replace code line ![](./images/image20.png) with the following code snippet:
+
+```ts
+		//try catch ensures errors in floating promises are handled properly
+		try {
+			let approveDialog: Dialog;
+			approveDialog = (await this.base.getExtensionAPI().loadFragment({
+				contextPath: "",
+				controller: {
+					onConfirm() {
+						approveDialog.close().destroy();
+						resolve(null);
+					},
+					onCancel() {
+						approveDialog.close().destroy();
+						reject(null);
+					}
+				},
+				id: "myFragment",
+				initialBindingContext: context,
+				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"
+			})) as Dialog;
+			//consider dialog closing with ESC
+			approveDialog.attachAfterClose(function () {
+				approveDialog.destroy();
+				reject(null);
+			});			
+			approveDialog.open();
+		} catch (error) {
+			reject(null);
+		}
+```
+
+![](./images/image21.png)
+
+(16) Let's fix some more eslint errors. Hover over **Dialog** and click ![](./images/image16.png) to add the missing import statement.
+
+![](./images/image22.png)
+
+(17) Hover over **await** and click ![](./images/image24.png).
+
+![](./images/image23.png)
+
+(18) The popover informs informs that **await** statements are only allowed in containing async function. Click ![](./images/image26.png).
+
+![](./images/image25.png)
+
+(19) Select ![](./images/image28.png).
+
+![](./images/image27.png)
 
 ## Exercise 8.2 Move XML Fragment to App Folder
 
@@ -85,51 +135,44 @@ The **xml fragment** containing the dialog definition is provided with the proje
 We need to move it to the corresponding app's sub folder in order to make usage of it:
 
 Open project folder **app/test-resources/ext/fragment**.\
-Drag and drop file **Trees4Tickets.fragment.xml** (10) to folder **app/managetravels/webapp/ext/fragment** (11).
+Drag and drop file **Trees4Tickets.fragment.xml** (20) to folder **app/managetravels/webapp/ext/fragment** (21).
 
-![](./images/image14.png)
+![](./images/image29.png)
 
-(12) Confirm by clicking ![](./images/image17.png).
+(22) Confirm by clicking ![](./images/image32.png).
 
-![](./images/image16.png)
+![](./images/image31.png)
 
-The XML fragment (13) defines a dialog containing some UI5 controls and two buttons for saving and canceling.\
-The most interesting part is the **form element building block** used in (14) and (15).
-
+(23) The XML fragment ![](./images/image30.png) defines a dialog containing some UI5 controls and two buttons for saving and canceling.\
+The most interesting part is the **form element building block** used in (24) and (25).
 - with property **metaPath** pointing to a property of the current binding context, we can show the property as a form field, having the same behaviour as a standard field.
 - property **visible** shows and hides the form elements depending on the property path value. We are using boolean property **GoGreen** for that purpose, which is set when the checkbox is selected.
 
-![](./images/image18.png)
+![](./images/image33.png)
 
-(16) Open file **app/manifest.json**.\
-(17 ) Scroll to section **extends** where the controller extension is defined.\
-Please note how the specific instance of the object page controller is overridden:\
-the ID is constructed by using the pattern **YourApplicationID::ComponentID**
+## Exercise 8.3 - Testing the Controller Extension
 
-![](./images/image19.png)
+(26) Switch to the preview browser tab and click ![](./images/image40.png).
 
-(18) Switch to the preview browser tab and click ![](./images/image21.png).
+![](./images/image39.png)
 
-![](./images/image20.png)
+(27) Make sure that the **Trees-4-Tickets** flag is not set in the sustainability field group, then press  ![](./images/image42.png).
 
-(19) Make sure that the **Trees-4-Tickets** flag is not set in the sustainability field group, then press ![](./images/image23.png).
-
-![](./images/image22.png)
+![](./images/image41.png)
 
 The dialog is shown.\
-(20) Select check box **Trees-4-Tickets**.\
+(28) Select check box **Trees-4-Tickets**.\
 the draft is automatically updated in the background.
 
-(21) Additional form fields with updated data are shown.
+(29) Additional form fields with updated data are shown.
 
-(22) Click ![](./images/image27.png).
+(30) Click ![](./images/image46.png).
 
-![](./images/image24.png)
+![](./images/image43.png)
 
-(23) The object is saved and the UI switches back to display mode.
+(31) The object is saved and the UI switches back to display mode.
 
-![](./images/image28.png)
-
+![](./images/image47.png)
 
 ## Summary
 

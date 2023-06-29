@@ -8,7 +8,37 @@ import Dialog from 'sap/m/Dialog';
  * @controller
  */
 export default class ObjectPageExtension extends ControllerExtension<ExtensionAPI> {
-	static readonly overrides = {
+	async openDialog(resolve: (value: PromiseLike<null> | null) => void, reject: (reason?: any) => void, context: Context) {
+		//try catch ensures errors in floating promises are handled properly
+		try {
+			let approveDialog: Dialog;
+			approveDialog = (await this.base.getExtensionAPI().loadFragment({
+				contextPath: "",
+				controller: {
+					onConfirm() {
+						approveDialog.close().destroy();
+						resolve(null);
+					},
+					onCancel() {
+						approveDialog.close().destroy();
+						reject(null);
+					}
+				},
+				id: "myFragment",
+				initialBindingContext: context,
+				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"
+			})) as Dialog;
+			//consider dialog closing with ESC
+			approveDialog.attachAfterClose(function () {
+				approveDialog.destroy();
+				reject(null);
+			});			
+			approveDialog.open();
+		} catch (error) {
+			reject(null);
+		}
+	}
+	static overrides = {
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
@@ -27,38 +57,7 @@ export default class ObjectPageExtension extends ControllerExtension<ExtensionAP
 					//void intentionally discards returned floating promise
 					return new Promise<null>((resolve, reject) => { void this.openDialog(resolve, reject, context); })
 				}
-			},
-		},
-	};
-
-	private async openDialog(resolve: (value: null) => void, reject: (reason?: unknown) => void, initialBindingContext: Context): Promise<void> {
-		//try catch ensures errors in floating promises are handled properly
-		try {
-			let approveDialog: Dialog;
-			approveDialog = (await this.base.getExtensionAPI().loadFragment({
-				contextPath: "",
-				controller: {
-					onConfirm() {
-						approveDialog.close().destroy();
-						resolve(null);
-					},
-					onCancel() {
-						approveDialog.close().destroy();
-						reject(null);
-					}
-				},
-				id: "myFragment",
-				initialBindingContext,
-				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"
-			})) as Dialog;
-			//consider dialog closing with ESC
-			approveDialog.attachAfterClose(function () {
-				approveDialog.destroy();
-				reject(null);
-			});			
-			approveDialog.open();
-		} catch (error) {
-			reject(null);
+			}
 		}
 	}
 }

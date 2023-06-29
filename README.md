@@ -56,7 +56,7 @@ There are no special requirements to follow the exercises in this repository.
 - [Exercise 8 - Page Map: Adding a Controller Extension](/exercises/ex8#exercise-8---page-map-adding-a-controller-extension)
 	- [Exercise 8.1 - Using the Page Map to Add a Controller Extension](/exercises/ex8#exercise-81---using-the-page-map-to-add-a-controller-extension)
 	- [Exercise 8.2 Move XML Fragment to App Folder](/exercises/ex8#exercise-82-move-xml-fragment-to-app-folder)
-	- [Exercise 8.3 Testing the Controller Extension](/exercises/ex8#exercise-83-testing-the-controller-extension)
+	- [Exercise 8.3 Testing the Controller Extension](/exercises/ex8#exercise-83---testing-the-controller-extension)
 
 ## How to obtain support
 
