@@ -1,7 +1,7 @@
 
 # Exercise 3 - Improve Page Layout and add UI5 Freestyle Controls
 
-In this exercise we will improve the page layout and add features like a dynamic page title with snapped header content showing the filter status as it is known from the standard Listreport floorplan.\
+In this exercise we will improve the page layout and add features like a dynamic page title with snapped header content showing the filter status as it is known from the standard List Report floorplan.\
 In order to adopt a custom design proposal, we will then add a tile slider showing open travels with a high total price.
 
 ![](./images/sketchdetail.png)
@@ -112,7 +112,7 @@ The value is retrieved by FilterBar API function **getActiveFiltersText()**.
 
 ![](./images/tsimage9.png)
 
-(13) Add the following handler function **onFiltersChanged** as shown in the screenshot below. In The handler function, property **filterTextInfo** is set every time the filter has been changed.
+(13) Add the following handler function **onFiltersChanged** as shown in the screenshot below. In the handler function, property **filterTextInfo** is set every time the filter has been changed.
 ```ts
     public onFiltersChanged(event: Event) : void {
         const filterBar = event.getSource() as FilterBar;
@@ -199,7 +199,7 @@ Please note the filter parameter operating on the draft administrative propertie
 ```
 ![](./images/tsimage20.png)
 
-(23) Let's fix some typescript eslint issues. Hove the mouse cursor over the syntax highlighted at **GenericTile** and click on **Quick Fix...**.
+(23) Let's fix some TypeScript ESLint issues. Hover the mouse cursor over the syntax highlighted at **GenericTile** and click on **Quick Fix...**.
 
 ![](./images/tsimage23.png)
 
@@ -207,7 +207,7 @@ Please note the filter parameter operating on the draft administrative propertie
 
 ![](./images/tsimage25.png)
 
-Apply a quick fix on the eslint issue shown for **Context**.
+Apply a quick fix on the ESLint issue shown for **Context**.
 
 ![](./images/eslintissue.png)
 
