@@ -1,7 +1,6 @@
-# Exercise 5 - Flexible Programming Model: Extending the Object Page with a Custom Section and Building Blocks
+# Exercise 5 - Flexible Programming Model: Extending the Object Page with a Custom Section and a Building Block
 
-In this exercise, we will combine UI5 freestyle controls with Fiori elements building blocks in a custom section.\
-With the **table building block**, we get the same behaviour and looks of the replaced table section.
+In this exercise, we will combine a UI5 freestyle control with building block table in a custom section.
 
 ## Exercise 5.1 Add LineItem annotation via LSP Support
 
