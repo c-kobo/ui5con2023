@@ -1,24 +1,22 @@
-import Event from 'sap/ui/base/Event';
-import JSONModel from 'sap/ui/model/json/JSONModel';
+import ExtensionAPI from 'sap/fe/core/ExtensionAPI';
+import UI5Event from 'sap/ui/base/Event';
+import MessageToast from 'sap/m/MessageToast';
 import Popover from 'sap/m/Popover';
-import ExtensionAPI from 'sap/fe/templates/ObjectPage/ExtensionAPI';
+import JSONModel from 'sap/ui/model/json/JSONModel';
 
-//add chart event parameter typings to our Macro Chart API?
 interface paramType {
     data: object;
     target: object;
 }
 
 /**
- * Generated event handler.
- *
- * @param this reference to the 'this' that the event handler is bound to.
+ * @param this reference to the Fiori elements ExtensionAPI.
  * @param event the event object provided by the event provider
  */
-export function onChartSelectionChanged(this: ExtensionAPI, event: Event<Record<string, any>>) {
+export function onChartSelectionChanged(this: ExtensionAPI, event: UI5Event<Record<string, any>>) {
     if (event.getParameter("selected")) {
         //get element in the context of the custom section fragment
-        //byId will be made public on the ExtensionAPI with one of the next releases
+        //byId will be made public on the ExtensionAPI with SAPUI5 release 1.116.0
         const element = this.byId("myPopover");
         if (element instanceof Popover) {  
             let popupModel = element.getModel("popup") as JSONModel;
