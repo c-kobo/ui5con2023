@@ -168,71 +168,8 @@ defined in file **app/field-control.cds** [line 37 ff.](/app/field-control.cds#3
 
 ![](./images/image55.png)
 
-
-We will now add a table section by using the Page Map.
-
-(42) Click **Add Sections**.
-
-(43) Select **Add Table Section**.
-
-![](./images/image58.png)
-
-(44) Enter **My Itinerary** as label and create a text key for it by clicking ![](./images/image62.png).\
-(45) Confirm dialog with ![](./images/image63.png).
-
-![](./images/image61.png)
-
-(46) Open drop-down **Value Source** and select **to_Booking**.
-
-![](./images/image64.png)
-
-(47) Click **Add**.
-
-(48) (49) Expand the section hierarchy.
-
-(50) Click **Add Columns** ![](./images/image70.png).
-
-(51) Select ![](./images/image71.png).
-
-![](./images/image67.png)
-
-(52) In dialog **Add Basic Columns**, open the drop-down and select the following properties:\
-(You can search for properties behind navigation paths by entering the path segment followed by '/')
-
-- **to_Carrier/AirlinePicUrl**
-- **BookingID**
-- **to_Customer_CustomerID**
-- **to_Carrier_AirlineID**
-- **ConnectionID**
-- **FlightDate**
-- **FlightPrice**
-- **BookingStatus_code**
-
-![](./images/image72.png)
-
-(53) Click ![](./images/image10.png).
-
-![](./images/image73.png)
-
-(54)(55) If not in the right order, you can rearrange the columns by drag and drop.
-
-![](./images/image74.png)
-
-Please note that in the Page Map you can always navigate to the corresponding annotation by clicking button ![Navigate to Source code](./images/navCodeIcon.png).
-
-![](./images/navToCode.png)
-
-Switch to the preview browser tab.\
-(56) On the object page, Click **Enter Full Screen** ![](./images/image77.png).
-
-![](./images/image76.png)
-
-The table is shown below the group section.
-
-![](./images/image78.png)
-
 ## Summary
 
 You've now successfully configured the object page layout by adding group section and sub sections by making usage of the Page Map.
 
-Continue to - [Exercise 6 - Adding a Custom Section](../ex5/README.md)
+Continue to - [Exercise 5 - Adding a Custom Section](../ex5/README.md)

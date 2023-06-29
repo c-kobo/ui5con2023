@@ -52,7 +52,7 @@ Choose the corresponding list entry.
 
 ![](./images/image18.png)
 
-(12) Click ![](./images/image8.png).
+(12) Click **Next**.
 
 ![](./images/image20.png)
 
