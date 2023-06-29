@@ -1,7 +1,8 @@
 # Getting Started - Setting up your Development Environment
 
 If you don't have an **SAP BTP trial account** already, see this [tutorial](https://developers.sap.com/tutorials/hcp-create-trial-account.html).\
-After activation, or if you already had an SAP account, go to the SAP [BTP Trial page](https://account.hanatrial.ondemand.com/) and click Log On.
+After activation, or if you already had an SAP account, go to the SAP [BTP Trial page](https://account.hanatrial.ondemand.com/) and click **Log On**.
+
 ## Setting Up SAP Business Application Studio
 
 Depending on when you created the SAP BTP Trial account, the subscription to **SAP Business Application Studio** might already be added in the subaccount.\
