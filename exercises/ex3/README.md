@@ -210,10 +210,9 @@ Please note the filter parameter operating on the draft administrative propertie
 Apply a quick fix on the ESLint issue shown for **Context**
 by adding an import from **sap/ui/model/odata/v4/Context**.
 
-![](./images/eslintissue.png)
+![sap/ui/model/odata/v4/Context](./images/eslintissue.png)
 
 Switch to the app preview browser tab and refresh. 
-
 
 (25) Click the collapse header icon ![](./images/tsimage28.png) or scroll the table to show the tiles. 
 
