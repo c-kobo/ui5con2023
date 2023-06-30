@@ -207,7 +207,8 @@ Please note the filter parameter operating on the draft administrative propertie
 
 ![](./images/tsimage25.png)
 
-Apply a quick fix on the ESLint issue shown for **Context**.
+Apply a quick fix on the ESLint issue shown for **Context**
+by adding an import from **sap/ui/model/odata/v4/Context**.
 
 ![](./images/eslintissue.png)
 
