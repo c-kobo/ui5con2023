@@ -135,6 +135,12 @@ The empty custom app page is shown.
 Make sure you enable pop-ups
 for SAP Business Application Studio, then restart with **Preview Application** as described above.
 
+- **Please note**: the automatic refresh of the UI when changing some project source code might not be properly working yet with the new typescript based project setup. this is currently under investigation, and a fix might be available only after ui5con2023.
+- Furthermore, you will notice a recurring popup informing you about exposed router ports when applying changes to the project in Business Application Studio which is also being investigated. Please just ignore or close the popup in that case.
+
+![](./images/exposedPorts.png)
+
+
 ## Usage of Guided Answers extension by SAP for Trouble Shooting
 
 If you are experiencing an issue with the application preview you can use the **Guided Answers extension by SAP** within your IDE to\

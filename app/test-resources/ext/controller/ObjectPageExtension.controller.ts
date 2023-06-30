@@ -13,21 +13,20 @@ export default class ObjectPageExtension extends ControllerExtension<ExtensionAP
 		try {
 			let approveDialog: Dialog;
 			approveDialog = (await this.base.getExtensionAPI().loadFragment({
-				contextPath: "",
-				controller: {
-					onConfirm() {
-						approveDialog.close().destroy();
-						resolve(null);
-					},
-					onCancel() {
-						approveDialog.close().destroy();
-						reject(null);
-					}
-				},
 				id: "myFragment",
 				initialBindingContext: context,
 				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"
 			})) as Dialog;
+			//Dialog Save button
+			approveDialog.getBeginButton().attachPress(function(){
+				approveDialog.close().destroy();
+				resolve(null);
+			})
+			//Dialog Cancel button
+			approveDialog.getEndButton().attachPress(function(){
+				approveDialog.close().destroy();
+				reject(null);
+			})			
 			//consider dialog closing with ESC
 			approveDialog.attachAfterClose(function () {
 				approveDialog.destroy();

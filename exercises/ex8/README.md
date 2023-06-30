@@ -43,7 +43,7 @@ the ID is constructed by using the pattern **YourApplicationID::ComponentID**.
 
 ![](./images/image12.png)
 
-(11) In the controller file, below function **onInit()** add the following code which overrides the **editFlow API** function **onBeforeSave**:
+(11) In the controller file, below function **onInit()** add the following code which overrides the **editFlow API** function [**onBeforeSave**](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.EditFlow%23methods/onBeforeSave) to intercept the save action. The framework waits for the returned promise to be resolved before continuing the 'Save' action. If you reject the promise, the 'Save' action is stopped and the user stays in edit mode. Inside the returned promise, a save dialog shall be instantiated:
 
 ```ts
 ,
@@ -62,7 +62,6 @@ the ID is constructed by using the pattern **YourApplicationID::ComponentID**.
 
 ![](./images/image14.png)
 
-Function **onBeforeSave** is called when pressing the **Save** button on the object page, allowing to intercept the save event and show a custom dialog.
 
 For more examples on overriding the edit flow API, you can check the [Flexible Programming Model Explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/basicExtensibility).
 
@@ -85,21 +84,20 @@ For more examples on overriding the edit flow API, you can check the [Flexible P
 		try {
 			let approveDialog: Dialog;
 			approveDialog = (await this.base.getExtensionAPI().loadFragment({
-				contextPath: "",
-				controller: {
-					onConfirm() {
-						approveDialog.close().destroy();
-						resolve(null);
-					},
-					onCancel() {
-						approveDialog.close().destroy();
-						reject(null);
-					}
-				},
 				id: "myFragment",
 				initialBindingContext: context,
 				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"
 			})) as Dialog;
+			//Dialog Save button
+			approveDialog.getBeginButton().attachPress(function(){
+				approveDialog.close().destroy();
+				resolve(null);
+			})
+			//Dialog Cancel button
+			approveDialog.getEndButton().attachPress(function(){
+				approveDialog.close().destroy();
+				reject(null);
+			})			
 			//consider dialog closing with ESC
 			approveDialog.attachAfterClose(function () {
 				approveDialog.destroy();
