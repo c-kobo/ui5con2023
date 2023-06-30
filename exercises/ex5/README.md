@@ -20,9 +20,6 @@ annotate service.Booking with @(
             $Type : 'UI.DataField',
             Value : to_Carrier.AirlinePicURL,
             Label : 'AirlinePicURL',
-        },{
-            $Type : 'UI.DataField',
-            Value : BookingID,
         },
         {
             $Type : 'UI.DataField',
