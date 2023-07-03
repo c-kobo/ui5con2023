@@ -111,6 +111,8 @@ For more examples on overriding the edit flow API, you can check the [Flexible P
 
 ![](./images/image21.png)
 
+Please note the usage of ExtensionAPI method **loadFragment**. The method makes sure that the loaded fragment is templated with the current page context.
+
 (16) Let's fix some more eslint errors. Hover over **Dialog** and click ![](./images/image16.png) to add the missing import statement.
 
 ![](./images/image22.png)
