@@ -30,6 +30,7 @@ There are no special requirements to follow the exercises in this repository.
   - [Getting the Sample Scenario](exercises/ex0#getting-the-sample-scenario)
 - [Exercise 1 - Generating an SAP Fiori Elements App](exercises/ex1/)
     - [Exercise 1.1 - Using the SAP Fiori Tools Application Generator](/exercises/ex1#exercise-11-using-the-sap-fiori-tools-application-generator)
+    - [TypeScript Enablement](/exercises/ex1#typescript-enablement)
     - [Exercise 1.2 - Starting the App](/exercises/ex1#exercise-12-starting-the-app)
     - [Usage of Guided Answers extension by SAP for Trouble Shooting](/exercises/ex1#usage-of-guided-answers-extension-by-sap-for-trouble-shooting)
 - [Exercise 2 - Flexible Programming Model: Using Fiori Elements Building Blocks on a Custom Page](exercises/ex2#exercise-2---flexible-programming-model-using-fiori-elements-building-blocks-on-a-custom-page)

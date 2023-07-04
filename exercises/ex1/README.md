@@ -112,7 +112,7 @@ The app-specific package.json defines plugins for the SAPUI5 type definitions th
 
 ![](./images/appDependencies.png)
 
-## Exercise 1.3 Starting the App
+## Exercise 1.2 Starting the App
 
 After completing these steps we will have started the generated app.
 
