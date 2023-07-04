@@ -102,6 +102,16 @@ The custom page is configured as the default starting page in the application ma
 
 ![](./images/image31.png)
 
+## TypeScript Enablement
+
+The requirements for TypeScript enablement in this project setup are an NPM workspace configured in order to have the app project linked and managed from the root package. Furthermore, the added [cds-plugin-ui5](https://www.npmjs.com/package/cds-plugin-ui5) devDependency acts as a CAP server CDS plugin which enables the integration of UI5 tooling based projects into the CAP server via corresponding express middlewares.
+
+![](./images/dependencies.png)
+
+The app-specific package.json defines plugins for the SAPUI5 type definitions that can be imported into custom extension TypeScript handlers and controllers.  The UI5 Tooling transpile middleware and the corresponding transpile task in file ui5.yaml takes care of transpiling TypeScript code to ES5 using a babel configuration.
+
+![](./images/appDependencies.png)
+
 ## Exercise 1.3 Starting the App
 
 After completing these steps we will have started the generated app.
