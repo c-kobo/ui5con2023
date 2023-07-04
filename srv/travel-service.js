@@ -202,53 +202,6 @@ init() {
     }
   }
 
-  /**
-   * Trees-forTickets: Set criticality to highlight green flight status in booking table
-   */
-   async function setCriticality(BookingItems) {
-    function _setCriticality(BookingItem, GoGreen) {
-      if (GoGreen) {
-        BookingItem.criticality = parseInt(3)
-      } else {
-        BookingItem.criticality = parseInt(0)
-      }
-    }
-    if (BookingItems != null) {
-      var TravelTarget
-      var BookingTarget
-      var IsActiveEntity
-      var BookingUUID
-      if (Array.isArray(BookingItems) && BookingItems.length > 0) {
-        IsActiveEntity = BookingItems[0].IsActiveEntity
-        BookingUUID = BookingItems[0].BookingUUID
-      } else {
-        IsActiveEntity = BookingItems.IsActiveEntity
-        BookingUUID = BookingItems.BookingUUID
-      }
-      if (IsActiveEntity) {
-        TravelTarget = Travel
-        BookingTarget = Booking
-      } else {
-        TravelTarget = Travel.drafts
-        BookingTarget = Booking.drafts
-      }
-
-      const { travel } =
-        await SELECT.one`to_Travel_TravelUUID as travel`.from(
-          BookingTarget,
-          BookingUUID
-        )
-      const [{ GoGreen }] = await cds.read([
-        SELECT.one`GoGreen`.from(TravelTarget).where({ TravelUUID: travel }),
-      ])
-      if (Array.isArray(BookingItems)) {
-        BookingItems.forEach((item) => _setCriticality(item, GoGreen))
-      } else {
-        _setCriticality(BookingItems, GoGreen)
-      }
-    }
-  } 
-
     /**
      * Trees-for-Tickets: Update totals including green flight fee
      */
@@ -257,17 +210,6 @@ init() {
         return this._update_totalsGreen(req)
       }
     })
-
-    /**
-     * Trees-for-Tickets: Set criticality
-     */
-
-     this.after("READ", "Booking", (results, req) => { 
-      if (results.length > 0 && "BookingUUID" in results[0]){
-        return setCriticality(results)
-      }  
-    })
-
 
     /**
      * Exercise 6: Data for Bookings table micro chart

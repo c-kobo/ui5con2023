@@ -8,7 +8,7 @@ The micro chart shall show the Customer VIP Status per booking, based on all cum
 ![](./images/image1.png)
 
 The properties are annotated with **@Core.Computed**. The values are calculated in a read handler implementation for entity **Booking**
-in (3) file [/srv/travel-service.js](/srv/travel-service.js#286) , (4) section **Exercise 6: Data for Bookings table micro chart**.
+in (3) file [/srv/travel-service.js](/srv/travel-service.js#215) , (4) section **Exercise 6: Data for Bookings table micro chart**.
 
 ![](./images/image4.png)
 
