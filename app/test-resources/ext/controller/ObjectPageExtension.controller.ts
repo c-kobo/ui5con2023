@@ -11,8 +11,7 @@ export default class ObjectPageExtension extends ControllerExtension<ExtensionAP
 	async openDialog(resolve: (value: PromiseLike<null> | null) => void, reject: (reason?: any) => void, context: Context) {
 		//try catch ensures errors in floating promises are handled properly
 		try {
-			let approveDialog: Dialog;
-			approveDialog = (await this.base.getExtensionAPI().loadFragment({
+			let approveDialog = (await this.base.getExtensionAPI().loadFragment({
 				id: "myFragment",
 				initialBindingContext: context,
 				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"

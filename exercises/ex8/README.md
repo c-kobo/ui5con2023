@@ -82,8 +82,7 @@ For more examples on overriding the edit flow API, you can check the [Flexible P
 ```ts
 		//try catch ensures errors in floating promises are handled properly
 		try {
-			let approveDialog: Dialog;
-			approveDialog = (await this.base.getExtensionAPI().loadFragment({
+			let approveDialog = (await this.base.getExtensionAPI().loadFragment({
 				id: "myFragment",
 				initialBindingContext: context,
 				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"
