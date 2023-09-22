@@ -41,7 +41,8 @@ export default class Main extends Controller {
         });
         if (view) {
             view.setModel(mFBConditions, "fbConditions");  
-        }
+        };
+        filterBar.triggerSearch();
     }
 
     /**

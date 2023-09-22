@@ -71,7 +71,7 @@ In the wizard step **Project Attributes**, add the following attributes to the a
 - **Application Namespace**: sap.fe.cap\
 (namespace has to match exactly for some of the subsequent exercises to work properly)
 
-- **Minimum SAPUI5 version**: Choose version 1.115.1\
+- **Minimum SAPUI5 version**: Choose version 1.118.0\
  (This SAPUI5 version has some features required for some of the subsequent exercises to work properly)
 
 - Select **Configure Advanced Options**

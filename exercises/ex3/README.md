@@ -84,7 +84,8 @@ import Event from 'sap/ui/base/Event';
 to the import section.
 
 (9) Replace function **onAfterRendering** with the following code snippet. The function creates a JSONModel with property **filtersTextInfo** (and some others needed for the sample).\
-The value is retrieved by FilterBar API function **getActiveFiltersText()**.
+The value is retrieved by FilterBar API function **getActiveFiltersText()**.\
+Method **triggerSearch** makes sure that load is triggered on start of the app.
 
 ```ts
     public onAfterRendering(): void {
@@ -95,7 +96,8 @@ The value is retrieved by FilterBar API function **getActiveFiltersText()**.
         });
         if (view) {
             view.setModel(mFBConditions, "fbConditions");  
-        }
+        };
+        filterBar.triggerSearch();
     }
 ```
 ![](./images/tsimage1.png)
