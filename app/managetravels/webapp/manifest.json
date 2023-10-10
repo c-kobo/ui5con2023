@@ -1,0 +1,176 @@
+{
+    "_version": "1.49.0",
+    "sap.app": {
+        "id": "sap.fe.cap.managetravels",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:fpm",
+            "version": "1.11.1",
+            "toolsId": "2b9f4e0a-dc38-49a1-9710-a36c129bee8e"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/processor/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "dependencies": {
+            "minUI5Version": "1.119.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.fe.templates": {},
+                "sap.f": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.fe.cap.managetravels.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "routes": [
+                {
+                    "name": "TravelMain",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TravelMain"
+                    ]
+                },
+                {
+                    "name": "TravelObjectPage",
+                    "pattern": "Travel({TravelKey}):?query:",
+                    "target": [
+                        "TravelMain",
+                        "TravelObjectPage"
+                    ]
+                }
+            ],
+            "targets": {
+                "TravelMain": {
+                    "type": "Component",
+                    "id": "TravelMain",
+                    "name": "sap.fe.core.fpm",
+                    "options": {
+                        "settings": {
+                            "viewName": "sap.fe.cap.managetravels.ext.main.Main",
+                            "contextPath": "/Travel",
+                            "navigation": {
+                                "Travel": {
+                                    "detail": {
+                                        "route": "TravelObjectPage"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "controlAggregation": "beginColumnPages",
+                    "contextPattern": ""
+                },
+                "TravelObjectPage": {
+                    "type": "Component",
+                    "id": "TravelObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "navigation": {},
+                            "contextPath": "/Travel",
+                            "editableHeaderContent": false,
+                            "content": {
+                                "body": {
+                                    "sections": {
+                                        "CustomSection": {
+                                            "template": "sap.fe.cap.managetravels.ext.fragment.CustomSection",
+                                            "position": {
+                                                "placement": "After",
+                                                "anchor": "i18nTravel"
+                                            },
+                                            "title": "{i18n>myItinerary}",
+                                            "type": "XMLFragment"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "controlAggregation": "midColumnPages",
+                    "contextPattern": "/Travel({TravelKey})"
+                }
+            },
+            "config": {
+                "flexibleColumnLayout": {
+                    "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
+                    "defaultThreeColumnLayoutType": "ThreeColumnsMidExpanded"
+                },
+                "routerClass": "sap.f.routing.Router"
+            }
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {}
+            }
+        },
+        "rootView": {
+            "viewName": "sap.fe.templates.RootContainer.view.Fcl",
+            "type": "XML",
+            "async": true,
+            "id": "appRootView"
+        }
+    }
+}
