@@ -163,7 +163,11 @@
         },
         "extends": {
             "extensions": {
-                "sap.ui.controllerExtensions": {}
+                "sap.ui.controllerExtensions": {
+                    "sap.fe.templates.ObjectPage.ObjectPageController#sap.fe.cap.managetravels::TravelObjectPage": {
+                        "controllerName": "sap.fe.cap.managetravels.ext.controller.ObjectPageExtension"
+                    }
+                }
             }
         },
         "rootView": {
