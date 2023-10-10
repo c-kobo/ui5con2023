@@ -65,7 +65,16 @@ the ID is constructed by using the pattern **YourApplicationID::ComponentID**.
 
 For more examples on overriding the edit flow API, you can check the [Flexible Programming Model Explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/basicExtensibility).
 
-(12) Let's take care of the syntax error shown at method **openDialog**. Hover the mouse over it. The popover shows that the method does not exist. Click ![](./images/image16.png).
+(12) Let's take care of the syntax error shown at **Context** and at method **openDialog**.\
+Hover the mouse over **Context**. Click ![](./images/image16.png).
+
+![](./images/image15a.png)
+
+Select ![](./images/image15c.png)
+
+![](./images/image15b.png)
+
+Hover the mouse over **openDialog**. The popover shows that the method does not exist. Click ![](./images/image16.png).
 
 ![](./images/image15.png)
 
