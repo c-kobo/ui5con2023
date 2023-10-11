@@ -16,8 +16,8 @@ interface paramType {
 export function onChartSelectionChanged(this: ExtensionAPI, event: UI5Event<Record<string, any>>) {
     if (event.getParameter("selected")) {
         //get element in the context of the custom section fragment
-        //byId will be made public on the ExtensionAPI with SAPUI5 release 1.116.0
-        const element = this.byId("myPopover");
+        //access popover control via stable id
+        const element = this.byId("sap.fe.cap.managetravels::TravelObjectPage--fe::CustomSubSection::CustomSection--myPopover");
         if (element instanceof Popover) {  
             let popupModel = element.getModel("popup") as JSONModel;
     

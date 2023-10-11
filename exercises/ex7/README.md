@@ -18,7 +18,7 @@ In file **app/capabilities.cds** (3) you can find the corresponding **aggregati
 - Collection **Transformations** lists all supported transformations for the entity container.
 - Collection **GroupableProperties** contains the properties of the annotated entity that can be used in a **groupby** transformation.
 - Collection **AggregatableProperties** contains the properties of the annotated entity that can be used for aggregation
-- Collection **Analytics.AggregatedProperties** defines the aggregate expression with an aggregation method for the aggregatable property.
+- **Aggregation.default** defines the aggregate expression with an aggregation method for the aggregatable property.
 
 ## Exercise 7.1 - Use Guided Development to Add Building Block Chart
 
@@ -50,7 +50,7 @@ In file **app/capabilities.cds** (3) you can find the corresponding **aggregati
 
 (13) **Entity: BookedFlights**
 
-(14) **Chart Qualifier: BookedFlights**
+(14) **Chart Qualifier: BookedFlights** and **Chart Type: Column**
 
 (15) **Chart Title: Bookings per Airline**.
 
@@ -221,8 +221,8 @@ interface paramType {
 export function onChartSelectionChanged(this: ExtensionAPI, event: UI5Event<Record<string, any>>) {
     if (event.getParameter("selected")) {
         //get element in the context of the custom section fragment
-        //byId will be made public on the ExtensionAPI with SAPUI5 1.116.0
-        const element = this.byId("myPopover");
+        //access popover control via stable id
+        const element = this.byId("sap.fe.cap.managetravels::TravelObjectPage--fe::CustomSubSection::CustomSection--myPopover");
         if (element instanceof Popover) {  
             let popupModel = element.getModel("popup") as JSONModel;
     
