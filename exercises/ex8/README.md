@@ -32,7 +32,7 @@ The **Add Controller Extension Dialog** is opened.
 
 ![](./images/image8.png)
 
-(8) Open file **app/manifest.json**.\
+(8) Open file **app/managetravels/webapp/manifest.json**.\
 (9) Scroll to section **extends** where the controller extension is defined.\
 Please note how the specific instance of the object page controller is overridden:\
 the ID is constructed by using the pattern **YourApplicationID::ComponentID**.
