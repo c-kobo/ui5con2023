@@ -1,14 +1,7 @@
-# ui5con2023 - Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools
-
-
-## Description
-
-This repository contains the material for the UI5Con 2023 session called\
-**Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools**.  
+# Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools
 
 ## Overview
 
-Welcome to the ui5con workshop **Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools**.\
 SAP Fiori tools make it faster and easier to create SAPUI5 apps. Get hands-on experience on great efficiency features, such as the page editor to add and configure page content, guided answers to fast-track issue resolution, TypeScript support and more. SAP Fiori tools support not only SAP Fiori elements, but also offer features to scale the creation of SAPUI5 custom apps and to leverage the flexible programming model available for the floorplans provided by SAP Fiori elements for OData V4.
 
 ## Target Application
