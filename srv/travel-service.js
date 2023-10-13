@@ -289,6 +289,17 @@ this.on ('rejectTravel', req => UPDATE (req.subject) .with ({TravelStatus_code:'
       }
 return flightsPerCustomer
     }    
+
+		// @cap-js/sqlite only supports single arguments in $search --> combine everything into a single string
+		this.before("READ", async (req) => {
+			if (req.query.SELECT.search?.length > 1) {
+				const val = req.query.SELECT.search
+					.filter((arg) => arg.val)
+					.map((arg) => arg.val)
+					.join(" ");
+				req.query.SELECT.search = [{ val: val }];
+			}
+		});    
    
     // Add base class's handlers. Handlers registered above go first.
     return super.init()
