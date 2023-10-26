@@ -68,6 +68,7 @@ Navigate to the object page.
 (5) In the combo box, select ![](./images/image9.png).
 
 ![](./images/image8.png)
+
 In the dialog **Add Custom Section**, enter **My Itinerary** as title.\
 (6) On the right end of the **Title** input field, click icon ![](./images/image11.png).
 

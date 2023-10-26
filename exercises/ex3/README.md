@@ -207,7 +207,7 @@ Please note the filter parameter operating on the draft administrative propertie
 
 (24) Select ![](./images/tsimage26.png)
 
-![](./images/tsimage25b.png)
+![](./images/tsimage25.png)
 
 Apply another quick fix on the ESLint issue shown for **Context**
 by adding a type import from **sap/ui/model/odata/v4/Context**.
