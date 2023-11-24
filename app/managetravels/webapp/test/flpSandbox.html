@@ -70,7 +70,9 @@
 </head>
 
 <!-- UI Content -->
-
+<script type="text/javascript">
+    sap.ui.getCore().attachInit(() => sap.ushell.Container.createRenderer().placeAt("content"));
+</script>
 <body class="sapUiBody" id="content">
 </body>
 
