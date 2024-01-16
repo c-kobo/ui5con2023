@@ -85,8 +85,5 @@
   "private": true,
   "workspaces": [
     "app/*"
-  ],
-  "sapux": [
-    "app/managetravels"
   ]
 }
