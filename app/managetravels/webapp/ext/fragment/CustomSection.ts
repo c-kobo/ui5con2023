@@ -1,9 +1,7 @@
 import ExtensionAPI from "sap/fe/core/ExtensionAPI";
-import UI5Event from 'sap/ui/base/Event';
-import MessageToast from 'sap/m/MessageToast';
+import UI5Event from "sap/ui/base/Event";
 import Popover from "sap/m/Popover";
 import JSONModel from "sap/ui/model/json/JSONModel";
-import Fragment from "sap/ui/core/Fragment";
 
 interface paramType {
     data: object;

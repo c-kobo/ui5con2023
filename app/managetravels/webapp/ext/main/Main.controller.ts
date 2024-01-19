@@ -1,6 +1,6 @@
 import Controller from "sap/fe/core/PageController";
-import JSONModel from 'sap/ui/model/json/JSONModel';
-import Event from 'sap/ui/base/Event';
+import JSONModel from "sap/ui/model/json/JSONModel";
+import Event from "sap/ui/base/Event";
 import FilterBar from "sap/fe/macros/filterBar/FilterBarAPI";
 import GenericTile from "sap/m/GenericTile";
 import Context from "sap/ui/model/odata/v4/Context";
@@ -20,7 +20,7 @@ export default class Main extends Controller {
     //}
 
     /**
-     * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
+     * Similar to onAfterRendering, but this hook is invoked before the controller"s View is re-rendered
      * (NOT before the first rendering! onInit() is used for that one!).
      * @memberOf sap.fe.cap.managetravels.ext.main.Main
      */
@@ -40,8 +40,8 @@ export default class Main extends Controller {
             filtersTextInfo: filterBar.getActiveFiltersText()
         });
         if (view) {
-            view.setModel(mFBConditions, "fbConditions");  
-        };
+            view.setModel(mFBConditions, "fbConditions"); 
+        }
         filterBar.triggerSearch();
     }
 

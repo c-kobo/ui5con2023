@@ -15,9 +15,12 @@
                 "./webapp/*"
             ]
         },
-        "types": [
-            "@sapui5/types"
-        ]
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules/@sapui5/types",
+            "../../node_modules/@types",
+            "../../node_modules/@sapui5/types"
+          ]
     },
     "include": [
         "./webapp/**/*"

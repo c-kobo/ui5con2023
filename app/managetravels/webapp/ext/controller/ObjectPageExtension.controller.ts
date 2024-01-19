@@ -1,7 +1,7 @@
-import ControllerExtension from 'sap/ui/core/mvc/ControllerExtension';
-import ExtensionAPI from 'sap/fe/templates/ObjectPage/ExtensionAPI';
-import Context from 'sap/ui/model/odata/v4/Context';
-import Dialog from 'sap/m/Dialog';
+import ControllerExtension from "sap/ui/core/mvc/ControllerExtension";
+import ExtensionAPI from "sap/fe/templates/ObjectPage/ExtensionAPI";
+import Context from "sap/ui/model/odata/v4/Context";
+import Dialog from "sap/m/Dialog";
 
 /**
  * @namespace sap.fe.cap.managetravels.ext.controller.ObjectPageExtension
@@ -17,26 +17,27 @@ export default class ObjectPageExtension extends ControllerExtension<ExtensionAP
 				name: "sap.fe.cap.managetravels.ext.fragment.Trees4Tickets"
 			})) as Dialog;
 			//Dialog Save button
-			approveDialog.getBeginButton().attachPress(function(){
+			approveDialog.getBeginButton().attachPress(function () {
 				approveDialog.close().destroy();
 				resolve(null);
-			})
+			});
 			//Dialog Cancel button
-			approveDialog.getEndButton().attachPress(function(){
+			approveDialog.getEndButton().attachPress(function () {
 				approveDialog.close().destroy();
 				reject(null);
-			})			
+			});
 			//consider dialog closing with ESC
 			approveDialog.attachAfterClose(function () {
 				approveDialog.destroy();
 				reject(null);
-			});			
+			});
 			approveDialog.open();
 		} catch (error) {
 			reject(null);
 		}
 	}
 	static overrides = {
+
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
@@ -44,7 +45,7 @@ export default class ObjectPageExtension extends ControllerExtension<ExtensionAP
 		 */
 		onInit(this: ObjectPageExtension) {
 			// you can access the Fiori elements extensionAPI via this.base.getExtensionAPI
-			const model = this.base.getExtensionAPI().getModel();
+			//const model = this.base.getExtensionAPI().getModel();
 		},
 		editFlow: {
 			onBeforeSave(this: ObjectPageExtension) {
@@ -53,9 +54,10 @@ export default class ObjectPageExtension extends ControllerExtension<ExtensionAP
 					.getBindingContext() as Context;
 				if (!context.getProperty("GoGreen")) {
 					//void intentionally discards returned floating promise
-					return new Promise<null>((resolve, reject) => { void this.openDialog(resolve, reject, context); })
+					return new Promise<null>((resolve, reject) => { void this.openDialog(resolve, reject, context); });
 				}
+				return undefined;
 			}
 		}
-	}
+	};
 }

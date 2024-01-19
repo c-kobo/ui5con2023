@@ -18,7 +18,7 @@ sap.ui.define([
                 Given.iTearDownMyApp();
             });
         }
-    }
+    };
 
     return Journey;
 });
