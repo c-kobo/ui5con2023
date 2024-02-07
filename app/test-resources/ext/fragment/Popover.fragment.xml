@@ -24,7 +24,7 @@
 						</f:FormElement>
 						<f:FormElement label="Flights">
 							<f:fields>
-								<Text text="{popup>/CountFlights} Bookings" />
+								<Text text="{popup>/BookingUUID} Bookings" />
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="VIP Customer">

@@ -60,12 +60,12 @@ In file **app/capabilities.cds** (3) you can find the corresponding **aggregati
 
 ![](./images/image17.png)
 
-Instead of a dynamic measure we will be using a measure property based on a custom aggregate of type **countdistinct** on property **BookingUUID** defined in file [Capabilities.cds](../../app/capabilities.cds#49) (line 46).
-Select **Add a new measure** via the drop down.
+We will be using a measure property based on a custom aggregate of type **countdistinct** on property **BookingUUID** defined in file [Capabilities.cds](../../app/capabilities.cds#49) (line 46).\
+In case a **Dynamic Measures Property** placeholder is defaulted, select **Add a new measure** via the drop down, and
+delete the **Dynamic Measures Property** placeholder by clicking the Delete icon.
 
 ![](./images/Measure1.png)
 
-Delete the **Dynamic Measures Property** placeholder by clicking the Delete icon.
 
 ![](./images/Measure2.png)
 
@@ -144,7 +144,10 @@ This defines the position in the XML Fragment where the reference to building bl
 
 ![](./images/image47.png)
 
-(34) **Selection Change Function**: **handler.onChartSelectionChanged**\
+(34) Enter the **Selection Change Function**: 
+```js
+handler.onChartSelectionChanged
+```
 We will implement the handler in the next exercise.
 
 ![](./images/image49.png)
@@ -218,6 +221,8 @@ The file was created along with the custom section we added in exercise 6.\
 (46) Replace the file content with the following code snippet.
 
 ```ts
+import UI5Event from 'sap/ui/base/Event';
+
 interface paramType {
     data: object;
     target: object;
@@ -260,18 +265,22 @@ export function onChartSelectionChanged(this: ExtensionAPI, event: UI5Event<Reco
 
 ![](./images/image012.png)
 
-(49) (50) Apply another **Quick Fix** for **JSONModel**.
+(49) (50) Apply another **Quick Fix** for **JSONModel** and **ExtensionAPI**.
 
 ![](./images/image014.png)
 
 ![](./images/image016.png)
 
+![](./images/image014b.png)
+
+![](./images/image014c.png)
+
 (51) Added imports are shown in the import section.
 
 ![](./images/image018.png)
 
-Exercise 7.4 Testing the Chart's Event Handler
-Switch to the preview browser tab.
+## Exercise 7.4 Testing the Chart's Event Handler
+Switch to the preview browser tab.\
 (52) Select a chart segment in order to display the popover with additional information about the VIP Customer program per airline.
 
 ![](./images/image019.png)
