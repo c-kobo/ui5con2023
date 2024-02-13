@@ -5,26 +5,24 @@ In this exercise the Fiori UI that was generated using the CAP travel service wi
 
 ## Exercise 10.1 - Add Fiori UI Deployment Configuration
 
-Open a terminal window, expand `app` and right-click your Fiori UI project `managetravels`, select `Open in Integrated Terminal`;
+(1) Open a terminal window, expand `app` and right-click your Fiori UI project `managetravels`, select `Open in Integrated Terminal`;
 
 ![](./images/image1.png)
 
-Run the command;
+(2) Run the command and select `Cloud Foundry`;
 ```bash
 npm run deploy-config
 ```
 
-Select `Cloud Foundry`;
-
 ![](./images/image2.png)
 
-Select `Local CAP Project API (Instance Based Destination`;
+(3) Select `Local CAP Project API (Instance Based Destination`;
 
 Where did this destination come from? When you run the npm command `deploy-config` it detects the presence of the `mta.yaml` which is also missing a local destination instance to allow communication between the Fiori UI and the CAP project when deployed to Cloud Foundry.
 
 ![](./images/image3.png)
 
-Since you are changing the contents of the `mta.yaml`, you are prompted to confirm these changes, enter `Y`;
+(4) Since you are changing the contents of the `mta.yaml`, you are prompted to confirm these changes, enter `Y`;
 
 ![](./images/image4.png)
 
@@ -36,7 +34,7 @@ The following changes were made to your Fiori UI application;
 * `package.json` was updated with additional Cloud Foundry scripts, for example `build:cf`
 * `manifest.json` is updated with the `sap.cloud` node to support binding to the managed approuter
 
-The following changes were made to your CAP application;
+(5) The following changes were made to your CAP application;
 
 * `package.json` was updated additional build, deploy and undeploy scripts
 * `mta.yaml` was updated to support the deployment of the Fiori UI Travel application
