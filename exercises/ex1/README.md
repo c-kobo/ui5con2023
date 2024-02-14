@@ -87,6 +87,8 @@ The generated artifacts are located in folder **app/managetravels** (the path re
 
 (15) Click **Open Page Map** on tab **Application Information** that is automatically displayed after app generation.
 
+Note: If the Page Map does not open, try refreshing the web browser page
+
 ![](./images/image25.png)
 
 (16) On the page map a Custom Page tile is shown. Click icon **Navigate to source code** ![](./images/image28.png).
