@@ -5,6 +5,7 @@ In this exercise you will deploy the generated mtar archive to Cloud Foundry wit
 
 # Prerequisites
 
+* You are subscribed to the [Launchpad Service](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html) to allow you host HTML5 applications on Cloud Foundry
 * You are subscribed to SAP HANA Cloud service, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-create-db-project.html) for more information on creating an SAP HANA database
 * SAP HANA Cloud database is set up and running in your SAP BTP space
 
