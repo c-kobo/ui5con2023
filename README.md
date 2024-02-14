@@ -61,9 +61,10 @@ There are no special requirements to follow the exercises in this repository.
   - [Exercise 10.1 - Add Fiori UI Deployment Configuration](/exercises/ex10#exercise-101---add-fiori-ui-deployment-configuration)
   - [Exercise 10.2 - Review Changes](/exercises/ex10#exercise-102---review-changes)
 - [Exercise 11 - Deploy to Cloud Foundry](/exercises/ex11#exercise-11---deploy-to-cloud-foundry)
-  - [Exercise 11.1 - Review Changes](/exercises/ex10#exercise-111---login-to-cloud-foundry)
+  - [Exercise 11.1 - Login to Cloud Foundry](/exercises/ex10#exercise-111---login-to-cloud-foundry)
   - [Exercise 11.2 - Option 1 - Build and Deploy Using CLI](/exercises/ex10#exercise-112---option-1---build-and-deploy-using-cli)
   - [Exercise 11.2 - Option 2 - Build and Deploy using Project Explorer](/exercises/ex10#exercise-112---option-2---build-and-deploy-using-project-explorer)
+  - [Exercise 11.3 - Retrieve Deployed Application](/exercises/ex10#exercise-113---retrieve-deployed-application)
 
 ## How to obtain support
 
