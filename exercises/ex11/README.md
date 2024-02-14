@@ -5,7 +5,10 @@ In this exercise you will deploy the generated mtar archive to Cloud Foundry wit
 
 # Prerequisites
 
-* You are subscribed to SAP HANA Cloud service, SAP HANA Cloud database is setup and running in your cloud space, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-create-db-project.html) for more information
+* You are subscribed to SAP HANA Cloud service, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-create-db-project.html) for more information on creating an SAP HANA database
+* SAP HANA Cloud database is set up and running in your SAP BTP space
+
+![](./images/hana_prerequisite.png)
 
 ## Exercise 11.1 - Login to Cloud Foundry
 
@@ -45,13 +48,15 @@ npm run deploy
 
 ![](./images/image6.png)
 
-(7) A new mtar archive is generated in `mta_archives` folder. Right-click the newly generated mtar archive and select `Deploy MTA Archive`;  
+(7) A new mtar archive is generated in the `mta_archives` folder. Right-click the newly generated mtar archive and select `Deploy MTA Archive`;
+
+__Note:__ Deployment will fail if the SAP HANA database in your cloud space is not started!
 
 ![](./images/image7.png)
 
 All going well, your CAP project with a Fiori UI application should be deployed to Cloud Foundry.
 
-## Exercise 11.3 - Access Deployed Application
+## Exercise 11.3 - Retrieve Deployed Application
 
 (8) To get a list of deployed HTML5 applications, run the following command;
 
