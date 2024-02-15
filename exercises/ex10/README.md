@@ -9,7 +9,7 @@ In this exercise the Fiori UI that was generated using the CAP travel service wi
 
 ![](./images/image1.png)
 
-(2) Run the command and select `Cloud Foundry`;
+(2) We are now going to run a CLI wizard to generate the deployment configuration for the HTML5 Fiori UI application, ensure to select `Cloud Foundry` as the `target` environment;
 ```bash
 npm run deploy-config
 ```
@@ -22,7 +22,7 @@ Where did this destination come from? When you run the npm command `deploy-confi
 
 ![](./images/image3.png)
 
-(4) Since you are changing the contents of the `mta.yaml`, you are prompted to confirm these changes, enter `Y`;
+(4) Since you are changing the contents of the `./mta.yaml`, you are prompted to confirm these changes, enter `Y`;
 
 ![](./images/image4.png)
 
@@ -30,18 +30,18 @@ Where did this destination come from? When you run the npm command `deploy-confi
 
 The following changes were made to your Fiori UI application;
 
-* a new file `xs-app.json` was added to support the OData routing when deployed to Cloud Foundry
-* `package.json` was updated with additional Cloud Foundry scripts, for example `build:cf`
-* `manifest.json` is updated with the `sap.cloud` node to support binding to the managed approuter
+* a new file `./app/managetravels/xs-app.json` was added to support the OData routing when deployed to Cloud Foundry
+* `./app/managetravels/package.json` was updated with additional Cloud Foundry scripts, for example `build:cf`
+* `./app/managetravels/webapp/manifest.json` was updated with the `sap.cloud` to support binding to the managed approuter when deployed to Cloud Foundry, this is to support routing of HTTP requests
 
 (5) The following changes were made to your CAP application;
 
-* `package.json` was updated additional build, deploy and undeploy scripts
-* `mta.yaml` was updated to support the deployment of the Fiori UI Travel application
+* `./package.json` was updated additional build, deploy and undeploy scripts
+* `./mta.yaml` was updated to support the deployment of the Fiori UI Travel application
 
 ![](./images/image5.png)
 
-You will notice that `html5` module contains a number of commands, one of these is `build:cf` which ensures the Fiori UI application is built for Cloud Foundry.
+Open `./mta.yaml` and notice the `html5` module contains a number of commands, one of these is `build:cf` which ensures the Fiori UI application is built for Cloud Foundry when building and deploying your CAP project to Cloud Foundry.
 
 ## Summary
 

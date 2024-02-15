@@ -94,11 +94,11 @@ The aggregation path points to the location in the xml view where the building b
 
 ![](./images/image38.png)
 
-Please note property **metaPath** referring to the **SelectionFields** annotation that has been inserted in the first step of the guide .
+Please note, the property **metaPath** is referring to the **SelectionFields** annotation that has been inserted in the first step of the guide.
 
 ![](./images/image38a.png)
 
-(24) If not already started, let's start the App Preview. Click ![](./images/image40.png) in the left toolbar of the Business Application Studio.
+(24) If not already started, let's start the App Preview. Click the SAP Fiori icon ![](./images/image40.png) in the left toolbar of Business Application Studio.
 
 (25) Click **Preview Application** ![](./images/image41.png).
 
@@ -112,7 +112,7 @@ Please note property **metaPath** referring to the **SelectionFields** annotatio
 
 ![](./images/image44.png)
 
-The corresponding value list annotations are provided in the project and can be found in file **app/value-helps.cds**.
+The corresponding value list annotations are provided in the project and can be found in file **app/value-helps.cds** retrieved from the backend OData metadata.
 
 ## Exercise 2.2 Adding Table Building Block
 
@@ -165,7 +165,7 @@ Open drop-downs and select entries for **CDS File** (31), **Service** (32) and *
 ![](./images/image64.png)
 
 (40) Enter the values as shown in the marked fields below.
-Keep the **Binding Context Path Type** set to relative. This makes sure that the metaPath to the LineItem annotation is relative to entity **Travel**.
+Keep the **Binding Context Path Type** set to relative. This makes sure that the **metaPath** to the **LineItem** annotation is relative to entity **Travel**.
 The **Aggregation Path** defines where building block table is to be inserted in the target xml view. Defining the **Associated Filter Bar ID** ensures that the filter bar can interact with the table.
 Leave all other values as proposed.
 
@@ -285,11 +285,13 @@ another text key for it.
 ![](./images/image109.png)
 
 Switch back to the preview browser tab. It is now showing the filter bar and the table. Use the selection fields and trigger selection with **Go** to test the connection between both building blocks.\
+
 (70) Click on a table line to navigate to the object page. By using table building block, navigation works solely through the context path without having to apply any additional custom coding.
 
 ![](./images/image111.png)
 
 The pages are shown in the flexible column layout. You can use the **expand/collapse** buttons in to upper right corner to change the layout of the screen areas.\
+
 The configured travel description and travel ID are shown in the object page header.
 
 ![](./images/image113.png)

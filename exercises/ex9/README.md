@@ -17,6 +17,8 @@ cds add tiny-sample
 
 ![](./images/image2.png)
 
+This adds a number `csv` files which are populated with entity samples, into the `./db` folder.
+
 ## Exercise 9.2 - Add a Multi Target Application configuration
 
 (3) In the terminal window,  run the command;
@@ -29,12 +31,12 @@ cds add mta
 
 The following files are now added to your project;
 
-* mta.yaml
-* xs-security.json
+* ./mta.yaml
+* ./xs-security.json
 
 ## Exercise 9.3 - Build CDS sources for HANA deployment
 
-(4) In the terminal window,  run the command;
+(4) In the terminal window, run the command;
 
 ```bash
 cds build --for hana
@@ -42,7 +44,7 @@ cds build --for hana
 
 ![](./images/image4.png)
 
-This is generates a `package.json` that is required for the database deployment, so lets copy that into the `db` folder;
+This generates a file called `./gen/db/package.json` that is required for the database deployment, so lets copy that into root `./db` folder;
 
 (5) In the terminal window,  run the command;
 
@@ -66,21 +68,23 @@ cp gen/db/package.json db
 
 ![](./images/image8.png)
 
-(9) Since the `xs-security.json` was already created in a previous step, the wizard will ask you for an `Action`. Assuming, you havent touched the `xs-security.json`, select `overwrite` to apply the default settings, then select `Finish` to complete the task.
+(9) Since the `./xs-security.json` was already created in a previous step, the wizard will ask you for an `Action`. Assuming, you haven't added any security attributes to the `./xs-security.json`, select `overwrite` to apply the default settings, then select `Finish` to complete the task.
 
 ![](./images/image9.png)
 
-The `mta.yaml` is now updated with a managed approuter configuration.
+The `./mta.yaml` is now updated with a managed approuter configuration.
+
+Want to learn more about the different types of routers? Follow this [link](https://help.sap.com/docs/btp/sap-business-technology-platform/managed-application-router).
 
 ## Exercise 9.5 - Validate your configuration
 
-(10) As it stands, `package.json` does not contain any build scripts! These will be added in another step! For the moment, you need to right click `mta.yaml` and select `Build MTA Project`;
+(10) As it stands, the `./package.json` in the root of your project, does not contain any build or deploy scripts! These will be added in another step! For the moment, you need to right-click `./mta.yaml` and select `Build MTA Project`;
 
 ![](./images/image10.png)
 
 ## Summary
 
-You've now successfully created an MTA archive using a managed approuter configuration that is ready for deployment!
+You've now successfully created an MTA archive using a managed approuter configuration that is ready for deployment to Cloud Foundry! However, remember, the `managetravels` HTML5 application has been appended just yet!
 
 Continue to - [Exercise 10 - Add Fiori UI application to MTA Configuration](../ex10/README.md)
 

@@ -87,7 +87,7 @@ The generated artifacts are located in folder **app/managetravels** (the path re
 
 (15) Click **Open Page Map** on tab **Application Information** that is automatically displayed after app generation.
 
-Note: If the Page Map does not open, try refreshing the web browser page
+__Note: If Page Map does not open, try refreshing the web browser page to reload the tooling__
 
 ![](./images/image25.png)
 
@@ -100,7 +100,8 @@ Note: If the Page Map does not open, try refreshing the web browser page
 ![](./images/image29.png)
 
 Both custom page XML View and controller had been created by the app generator. The files are located in folder **app/managetravels/ext/main**.\
-The custom page is configured as the default starting page in the application manifest routing section. Please note that the custom view is wrapped into the **Flexible Programming Model component** provided by SAP Fiori elements. This ensures that the custom page runs on the SAP Fiori elements framework and enables the usage of building blocks.
+
+The custom page is configured as the default starting page in the application manifest routing section. Please note, the custom view is wrapped into the **Flexible Programming Model component** provided by SAP Fiori elements. This ensures that the custom page runs on the SAP Fiori elements framework and enables the usage of building blocks.
 
 ![](./images/image31.png)
 
@@ -123,6 +124,7 @@ Besides the common way of starting a CAP service via **cds watch**, another conv
 In the following exercises, we will extend the app based on xml views and fragments. We need to make sure that the browser view cache is deactivated during testing our development, so that changes applied to the xml fragments get properly updated when refreshing the UI.
 
 Instead of using **cds watch** in the terminal in order to start the service, we will use the watch script that has been added to file **package.json** by the app generator. The script contains additional parameter **sap-ui-xx-viewCache=false** added to the app start Url.\
+
 If **cds watch** is already running in a terminal, please end it by pressing keyboard keys **control+c**, otherwise the default port 4004 will already be in use by the existing server process.
 
 \(18\) Click **Preview Application** on tab **Application Information**.
@@ -147,7 +149,8 @@ The empty custom app page is shown.
 Make sure you enable pop-ups
 for SAP Business Application Studio, then restart with **Preview Application** as described above.
 
-- **Please note**: the automatic refresh of the UI when changing some project source code might not be properly working yet with the new typescript based project setup. this is currently under investigation, and a fix might be available only after ui5con2023.
+**Please note**: the automatic refresh of the UI when changing some project source code might not be properly working yet with the new typescript based project setup. this is currently under investigation, and a fix might be available only after ui5con2023.
+
 - Furthermore, you will notice a recurring popup informing you about exposed router ports when applying changes to the project in Business Application Studio which is also being investigated. Please just ignore or close the popup in that case.
 
 ![](./images/exposedPorts.png)
