@@ -8,7 +8,7 @@ In this exercise you will deploy the generated mtar archive to Cloud Foundry wit
 * You are subscribed to the [Launchpad Service](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html) to allow you host HTML5 applications on Cloud Foundry
 * You are subscribed to SAP HANA Cloud trial service, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html)
 * You have provisioned an instance of SAP HANA Cloud, SAP HANA database, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-mission-trial-3.html)
-* SAP HANA Cloud database is set up and running in your SAP BTP space, as shown;
+* SAP HANA Cloud database is set up and running in your SAP BTP space, as shown in the screenshot
 
 ![](./images/hana_prerequisite.png)
 
@@ -28,7 +28,15 @@ In this exercise you will deploy the generated mtar archive to Cloud Foundry wit
 
 ![](./images/image3.png)
 
-(4) The `package.json` was updated with build and deploy scripts during a previous exercise. In the new terminal window, run the command;
+(4) The `./package.json` was updated with build and deploy scripts during exercise 9, for example;
+
+```json
+"undeploy": "cf undeploy ui5con2023 --delete-services --delete-service-keys --delete-service-brokers",
+"build": "rimraf resources mta_archives && mbt build --mtar archive",
+"deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+```
+
+In the new terminal window, run the `build` command;
 
 ```bash
 npm run build
@@ -36,7 +44,7 @@ npm run build
 
 ![](./images/image4.png)
 
-(5) A new mtar archive is generated in the `mta_archives` folder `/home/user/projects/ui5con2023/mta_archives/archive.mtar`. To deploy to Cloud Foundry, run the command;
+(5) A new `mtar` archive is generated in the `mta_archives` folder `./mta_archives/archive.mtar`. To deploy to Cloud Foundry, run the command;
 
 ```bash
 npm run deploy
@@ -46,11 +54,11 @@ npm run deploy
 
 ## Exercise 11.2 - Option 2 - Build and Deploy using Project Explorer
 
-(6) Right click `mta.yaml` and select `Build MTA Project`;
+(6) Right click `./mta.yaml` and select `Build MTA Project`;
 
 ![](./images/image6.png)
 
-(7) A new mtar archive is generated in the `mta_archives` folder. Right-click the newly generated mtar archive and select `Deploy MTA Archive`;
+(7) A new `mtar` archive is generated in the `mta_archives` folder. Right-click the newly generated `mtar` archive and select `Deploy MTA Archive`;
 
 __Note:__ Deployment will fail if the SAP HANA database in your cloud space is not started!
 

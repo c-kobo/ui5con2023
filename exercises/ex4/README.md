@@ -91,8 +91,6 @@ In this exercise we will add a group section and several form sub sections.
 
 (27) In the **Add Basic Fields** dialog, open the drop-down and select **TravelID**.\
 You can use the input field for filtering the available properties.\
-You can quickly remove the filter by pressing keys Ctrl+A(Mac: Cmd+A) then DEL.\
-The selected properties are kept.
 
 (28) Select ![](./images/image39.png).
 
@@ -146,10 +144,11 @@ Swich to the preview browser tab.\
 
 ![](./images/image50.png)
 
-The Travel tiles show travels with status open.\
+The Travel tiles show travels with status **open**.\
+
 (37) Click button ![](./images/image52.png) to change the travel status.\
-A side effect defined on the action in file **app/field-control.cds** [line 18 ff.](/app/field-control.cds#18) makes sure that the Travel entity is refreshed when the action is executed. With the status changed,\
-the tiles are refreshed, and the current selected Travel tile dissappears.\
+A side effect defined on the action in file **app/field-control.cds** [line 18 ff.](/app/field-control.cds#18) makes sure that the Travel entity is refreshed when the action is executed. With the status changed, the tiles are refreshed, and the current selected Travel tile dissappears.\
+
 For more information about side effects, please check the guide [Usage of Side Effects](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
 
 ![](./images/image51.png)
@@ -160,7 +159,8 @@ For more information about side effects, please check the guide [Usage of Side E
 
 ![](./images/image53.png)
 
-(40) Select the **Trees-4-Tickets** checkbox.\
+(40) Select the **Trees-4-Tickets** checkbox on the right-hand side.\
+
 For a sustainability initiative, the travel service provides some fields for a new green flight offering.\
 When the checkbox is selected, an info popover is shown (41), and the service backend calculates the values for properties **Green Flight Fee**,**Trees Planted**, and **Total Price**.\
 The values shown on the UI are automatically updated by another side effect on property **GoGreen** of entity **Travel**

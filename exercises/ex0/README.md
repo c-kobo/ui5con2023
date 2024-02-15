@@ -79,6 +79,7 @@ In the **Explorer** pane on the left side of SAP Business Application Studio, yo
 Open a terminal window from the root of your CAP project, right-click your project and select `Open in Integrated Terminal`;
 
 ![](./images/npm_install.png)
+
 Run the command to install the node dependencies;
 
 ```bash

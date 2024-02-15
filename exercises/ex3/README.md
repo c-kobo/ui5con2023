@@ -7,7 +7,7 @@ In order to adopt a custom design proposal, we will then add a tile slider showi
 ![](./images/sketchdetail.png)
 ## Exercise 3.1 - Adopt Dynamic Page Layout to the Main Page
 
-(1) Open the [filter bar sample](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault) in the Flexible Programming Model Explorer
+(1) Open the [filter bar sample](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault) in the Flexible Programming Model Explorer, a new browser tab should be opened showing the sample code snippet. Once opened, select **Filter Bar** on the left navigation menu, then select **Overview**.
 
 The sample shows the filter bar building block in a dynamic page layout.\
 (2) Click the **Collapse Header** icon ![](./images/image3.png) to see the filter status.
@@ -30,7 +30,7 @@ Switch back to the Business Application Studio and open file **app/managetravels
 xmlns:f="sap.f"
 ```
 
-(6) Replace the whole **\<Page\>** section with the adopted code snippet:
+(6) Replace the whole **\<Page\>** section with the following adopted code snippet:
 
 ```xml
     <f:DynamicPage id="Main" class="sapUiResponsiveContentPadding">
@@ -76,12 +76,11 @@ We now need to add some controller code for setting the filter status value and 
 
 (7) Open file **app/managetravels/webapp/est/main/Main.controller.ts**
 
-(8) Add 
+(8) Add the following imports to the import section.
 ```ts 
 import JSONModel from 'sap/ui/model/json/JSONModel';
 import Event from 'sap/ui/base/Event';
 ``` 
-to the import section.
 
 (9) Replace function **onAfterRendering** with the following code snippet. The function creates a JSONModel with property **filtersTextInfo** (and some others needed for the sample).\
 The value is retrieved by FilterBar API function **getActiveFiltersText()**.\
@@ -138,7 +137,7 @@ Switch to the preview browser tab.
 
 The target design of the app sketches an overview on open travels with a high total price in form of a tile slider in the custom page snapped header area. While this could be as well achieved by defining multiple tab views with a selection variant on a standard list report (and it is recommended to always evaluate what can be achieved with the standard means Fiori elements offers), customers might prefer an alternative design approach to meet their requirements, which can be achieved with the Flexible Programming Model.
 
-(16) Open the [Custom Page Sample](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customPageContent) in the **Flexible Programming Model Explorer**.
+(16) Open the [Custom Page Sample](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customPageContent) in the **Flexible Programming Model Explorer**, a new browser tab should be opened showing the sample code snippet, select **Custom Page** on the left navigation area.
 
 (17) Click on a tile to navigate to a Fiori elements object page.
 
@@ -199,6 +198,14 @@ Please note the filter parameter operating on the draft administrative propertie
         }
     } 
 ```
+
+The import section in the controller has been updated with additional imports;
+
+```js
+import GenericTile from "sap/m/GenericTile";
+import Context from "sap/ui/model/odata/v4/Context";
+```
+
 ![](./images/tsimage20.png)
 
 (23) Let's fix some TypeScript ESLint issues. Hover the mouse cursor over the syntax highlighted at **GenericTile** and click on **Quick Fix...**.
