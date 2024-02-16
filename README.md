@@ -1,4 +1,4 @@
-# Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools
+# Developing SAP Fiori Apps with Modern Tools and Technologies
 
 ## Overview
 
