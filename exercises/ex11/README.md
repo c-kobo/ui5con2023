@@ -5,10 +5,10 @@ In this exercise you will deploy the generated mtar archive to Cloud Foundry wit
 
 # Prerequisites
 
-* You are subscribed to the [Launchpad Service](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html) to allow you host HTML5 applications on Cloud Foundry
+* You are subscribed to the [Launchpad Service](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-getting-started.html) to allow HTML5 applications to be hosted on Cloud Foundry
 * You are subscribed to SAP HANA Cloud trial service, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html)
-* You have provisioned an instance of SAP HANA Cloud, SAP HANA database, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-mission-trial-3.html)
-* SAP HANA Cloud database is set up and running in your SAP BTP space, as shown in the screenshot
+* You have provisioned an instance of SAP HANA Cloud and bound the SAP HANA database to your `space`, refer to this [tutorial](https://developers.sap.com/tutorials/hana-cloud-mission-trial-8.html)
+* SAP HANA Cloud database is set up and running in your SAP BTP space, which can be found under  `Subaccount` -> `Overview` tab -> `Spaces` and selecting your space, then selecting `SAP HANA Cloud` as shown in the screenshot
 
 ![](./images/hana_prerequisite.png)
 
