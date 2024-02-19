@@ -2,7 +2,9 @@
 
 ## Overview
 
-SAP Fiori tools make it faster and easier to create SAPUI5 apps. Get hands-on experience on great efficiency features, such as the page editor to add and configure page content, guided answers to fast-track issue resolution, TypeScript support and more. SAP Fiori tools support not only SAP Fiori elements, but also offer features to scale the creation of SAPUI5 custom apps and to leverage the flexible programming model available for the floorplans provided by SAP Fiori elements for OData V4.
+SAP Fiori tools make it faster and easier to create SAPUI5 apps. Get hands-on experience on great efficiency features, such as the page editor to add and configure page content, guided answers to fast-track issue resolution, TypeScript support and more. SAP Fiori tools support not only SAP Fiori elements, but also offer features to scale the creation of SAPUI5 custom apps and to leverage the flexible programming model available for the floorplans provided by SAP Fiori elements for OData V4. 
+
+Go the extra mile and deploy to Cloud Foundry using S4/Hana.
 
 ## Target Application
 
@@ -12,7 +14,7 @@ Making a wire frame is a great way to visualize the app.
 
 ## Requirements
 
-There are no special requirements to follow the exercises in this repository.
+There are no special requirements except to have fun and provide us with feedback both positive and negative! 
 
 ## Exercises
 
