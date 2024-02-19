@@ -12,6 +12,9 @@ In this exercise you will deploy the generated mtar archive to Cloud Foundry wit
 
 ![](./images/hana_prerequisite.png)
 
+For more information around the different runtime option for example using SAP BTP, Cloud Foundry runtime or SAP BTP, Kyma runtime, refer to this [link](https://help.sap.com/docs/btp/btp-developers-guide/deploy-cap).
+
+
 ## Exercise 11.1 - Login to Cloud Foundry
 
 (1) From the left navigation bar, select `View`, `Command Palette`, `CF: Login to Cloud Foundry` and select authentication method that best suits you;
