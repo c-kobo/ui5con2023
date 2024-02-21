@@ -6,6 +6,13 @@ SAP Fiori tools make it faster and easier to create SAPUI5 apps. Get hands-on ex
 
 Go the extra mile and deploy to Cloud Foundry using S4/Hana.
 
+## Overview
+
+1. [Part 1 -UI5 Conference 2023 - Demo of generating Fiori UI application using a CAP project](https://www.youtube.com/watch?v=aCyMC27ED80&t=3703s)
+2. [Part 2 -UI5 Conference 2023 - Demo of generating Fiori UI application using a CAP project](https://www.youtube.com/watch?v=8LLBKQZXkDw)
+3. [Sample CAP Projects](https://github.com/SAP-samples/fiori-tools-samples/tree/main/cap)
+4. [Fiori tools Open Source Repository](https://github.com/SAP/open-ux-tools)
+
 ## Target Application
 
 Making a wire frame is a great way to visualize the app.
