@@ -74,7 +74,7 @@ Please note that the table building block is located in the dynamic page content
 
 We now need to add some controller code for setting the filter status value and for the filter changed event handler.
 
-(7) Open file **app/managetravels/webapp/est/main/Main.controller.ts**
+(7) Open file **app/managetravels/webapp/ext/main/Main.controller.ts**
 
 (8) Add 
 ```ts 

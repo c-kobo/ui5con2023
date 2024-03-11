@@ -125,15 +125,13 @@ Please note the usage of ExtensionAPI method **loadFragment**. The method makes 
 
 ![](./images/image22.png)
 
-(17) Hover over **await** and click ![](./images/image24.png).
+(17) Click ![](./images/image24.png).
 
 ![](./images/image23.png)
 
-(18) The popover informs informs that **await** statements are only allowed in containing async function. Click ![](./images/image26.png).
+(18) Hover over highlighted statement **await** and apply the proposed quick fix to add an async modifier to containing function **openDialog** (19).
 
 ![](./images/image25.png)
-
-(19) Select ![](./images/image28.png).
 
 ![](./images/image27.png)
 

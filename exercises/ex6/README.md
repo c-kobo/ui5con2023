@@ -8,12 +8,12 @@ The micro chart shall show the Customer VIP Status per booking, based on all cum
 ![](./images/image1.png)
 
 The properties are annotated with **@Core.Computed**. The values are calculated in a read handler implementation for entity **Booking**
-in (3) file [/srv/travel-service.js](/srv/travel-service.js#215) , (4) section **Exercise 6: Data for Bookings table micro chart**.
+in (3) file [/srv/travel-service.js](/srv/travel-service.js#215) , (4) section **Exercise 6: Data for Bookings table micro chart**. The calculation cumulates all bookings and returns the result grouped by Customer ID and Airline ID (see the highlighted select statement in the screenshot below).
 
 ![](./images/image4.png)
 
-In order to add a micro chart to a table, you have to define an annotation of type **@UI.DataPoint**. Its mandatory properties are **value** and a **target value**.\
-The data point needs to be referenced in the **measure attributes** of annotation **@UI.Chart**.\
+In order to add a micro chart to a table, you have to define an annotation of type **@UI.DataPoint** (representing the visualization of a single point of data, typically a number). Its mandatory properties are **value** (which we will set to the cumulated bookings value **BookedFlights** from the calculation above) and a **target value** (referring to a value **VIPCustomerBookings** which is statically defined per carrier in the master data).\
+The data point needs then to be referenced in the **measure attributes** of annotation **@UI.Chart**.\
 Chart type **#Donut** displays a **radial chart**. Properties **Measures** and **MeasureAttributes** are mandatory.
 
 (5) In the Page Map table section click on **Add Columns** ![](./images/image8.png).
