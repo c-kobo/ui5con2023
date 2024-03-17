@@ -149,7 +149,7 @@ The target design of the app sketches an overview on open travels with a high to
 ![](./images/image12.png)
 
 Switch back to the Application Studio.\
-(19) Open file **app/managetravels/webapp/i18n.properties** and add the following text keys :
+(19) Open file **app/managetravels/webapp/i18n/i18n.properties** and add the following text keys :
 
 ```js
 HighestPrice=Open Travels Highest Total Price (Thousands)
