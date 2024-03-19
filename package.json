@@ -25,7 +25,8 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "watch-managetravels": "cds watch --open sap.fe.cap.managetravels/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "cds": {
     "requires": {
@@ -85,5 +86,8 @@
   "private": true,
   "workspaces": [
     "app/*"
+  ],
+  "sapux": [
+    "app/managetravels"
   ]
 }
