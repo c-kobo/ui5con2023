@@ -34,14 +34,14 @@ export default class Main extends Controller {
      * @memberOf sap.fe.cap.managetravels.ext.main.Main
      */
     public onAfterRendering(): void {
-        const filterBar = this.byId("FilterBar") as FilterBar,
-        view = this.getView(),
-        mFBConditions = new JSONModel({
-            filtersTextInfo: filterBar.getActiveFiltersText()
-        });
+        const filterBar = this.byId("FilterBar") as unknown as FilterBar,
+            view = this.getView(),
+            mFBConditions = new JSONModel({
+                filtersTextInfo: filterBar.getActiveFiltersText()
+            });
         if (view) {
-            view.setModel(mFBConditions, "fbConditions"); 
-        }
+            view.setModel(mFBConditions, "fbConditions");
+        };
         filterBar.triggerSearch();
     }
 
@@ -52,13 +52,13 @@ export default class Main extends Controller {
     // public onExit(): void {
     //
     //  }
-    public onFiltersChanged(event: Event) : void {
-        const filterBar = event.getSource() as FilterBar;
-            const mFBConditions = filterBar.getModel("fbConditions");
-            if (mFBConditions instanceof JSONModel) {
-                mFBConditions.setProperty("/filtersTextInfo", filterBar.getActiveFiltersText());
-            }
-    }
+    public onFiltersChanged(event: Event): void {
+        const filterBar = this.byId("FilterBar") as unknown as FilterBar;
+        const mFBConditions = this.getView()?.getModel("fbConditions");
+        if (mFBConditions instanceof JSONModel) {
+            mFBConditions.setProperty("/filtersTextInfo", filterBar.getActiveFiltersText());
+        }
+    }       
     public onPressed(event: Event) : void {
         const oContext = (event.getSource() as GenericTile).getBindingContext();
         if (oContext) {
