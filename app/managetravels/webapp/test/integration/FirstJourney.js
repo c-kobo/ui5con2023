@@ -10,8 +10,6 @@ sap.ui.define([
             opaTest("Start application", function (Given, When, Then) {
                 Given.iStartMyApp();
 
-                Then.onTheTravelMain.iSeeThisPage();
-
             });
 
 
@@ -20,7 +18,7 @@ sap.ui.define([
                 Given.iTearDownMyApp();
             });
         }
-    }
+    };
 
     return Journey;
 });

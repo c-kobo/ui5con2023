@@ -60,7 +60,14 @@ In file **app/capabilities.cds** (3) you can find the corresponding **aggregati
 
 ![](./images/image17.png)
 
-We will be using a measure property based on a custom aggregate of type **countdistinct** on property **BookingUUID** defined in file [Capabilities.cds](../../app/capabilities.cds#49) (line 46).
+Instead of a dynamic measure we will be using a measure property based on a custom aggregate of type **countdistinct** on property **BookingUUID** defined in file [Capabilities.cds](../../app/capabilities.cds#49) (line 46).
+Select **Add a new measure** via the drop down.
+
+![](./images/Measure1.png)
+
+Delete the **Dynamic Measures Property** placeholder by clicking the Delete icon.
+
+![](./images/Measure2.png)
 
 (17)  Select as **Measures Property**: ![](./images/image20.png).
 

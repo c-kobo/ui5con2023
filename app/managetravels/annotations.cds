@@ -1,4 +1,5 @@
 using TravelService as service from '../../srv/travel-service';
+using from '../../db/schema';
 
 annotate service.Travel with @(
     UI.SelectionFields : [

@@ -1,10 +1,10 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Mar 19 2024 07:45:53 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Tue Oct 10 2023 08:56:10 GMT+0200 (Central European Summer Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
-|**App Generator Version**<br>1.13.0|
-|**Generation Platform**<br>SAP Business Application Studio|
+|**App Generator Version**<br>1.11.1|
+|**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>Custom Page V4|
 |**Service Type**<br>Local Cap|
 |**Service URL**<br>http://localhost:4004/processor/
@@ -12,7 +12,7 @@
 |**Application Title**<br>Manage Travels|
 |**Namespace**<br>sap.fe.cap|
 |**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.121.2|
+|**UI5 Version**<br>1.119.0|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>True|
 |**Add Eslint configuration**<br>False|
@@ -20,7 +20,7 @@
 
 ## managetravels
 
-An SAP Fiori application.
+A Fiori application.
 
 ### Starting the generated app
 

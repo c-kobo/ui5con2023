@@ -35,13 +35,13 @@ export default class Main extends Controller {
      */
     public onAfterRendering(): void {
         const filterBar = this.byId("FilterBar") as unknown as FilterBar,
-        view = this.getView(),
-        mFBConditions = new JSONModel({
-            filtersTextInfo: filterBar.getActiveFiltersText()
-        });
+            view = this.getView(),
+            mFBConditions = new JSONModel({
+                filtersTextInfo: filterBar.getActiveFiltersText()
+            });
         if (view) {
-            view.setModel(mFBConditions, "fbConditions"); 
-        }
+            view.setModel(mFBConditions, "fbConditions");
+        };
         filterBar.triggerSearch();
     }
 
@@ -59,7 +59,6 @@ export default class Main extends Controller {
             mFBConditions.setProperty("/filtersTextInfo", filterBar.getActiveFiltersText());
         }
     }       
-    
     public onPressed(event: Event) : void {
         const oContext = (event.getSource() as GenericTile).getBindingContext();
         if (oContext) {
