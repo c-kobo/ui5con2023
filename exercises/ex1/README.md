@@ -71,7 +71,7 @@ In the wizard step **Project Attributes**, add the following attributes to the a
 - **Application Namespace**: sap.fe.cap\
 (namespace has to match exactly for some of the subsequent exercises to work properly)
 
-- **Minimum SAPUI5 version**: Choose the latest available version\
+- **Minimum SAPUI5 version**: Choose version 1.120.11\
  (This is required for some of the subsequent exercises to work properly)
 
 - Select **Configure Advanced Options**
@@ -161,7 +161,11 @@ for SAP Business Application Studio, then restart with **Preview Application** a
 If you are experiencing an issue with the application preview you can use the **Guided Answers extension by SAP** within your IDE to\
 help with troubleshooting. The Guided Answers extension by SAP is **interactive documentation** designed to help users by guiding them\
 through tasks via a series of questions. You simply answer the questions presented to you to find the correct solution to your problem.\
-You can access the Guided Answer extension by SAP through the IDE command palette using the command ‘SAP: Open Guided Answers’.
+You can access the Guided Answer extension by SAP through the IDE command palette which can be opened via View -> Command Palette.
+
+![](./images/CommandPalette.jpg)
+
+In the input field enter command ‘SAP: Open Guided Answers’.
 
 ![](./images/ga1.png)
 
@@ -180,6 +184,7 @@ When using Application Studio in Chrome for the first time, one common reason fo
 Please check under **Reason 3** below how to get this resolved.
 
 ![](./images/ga5.png)
+
 ## Summary
 
 You've now successfully generated a SAP Fiori elements application of type Flexible Programming Model.

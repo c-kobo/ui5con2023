@@ -7,7 +7,7 @@ In this exercise, we will combine a UI5 freestyle control with building block ta
 In exercise 2 we have learned how to use guided development in order to add a building block to a page.
 We will now use CAP CDS LSP support to define the UI.LineItem annotation, and then use the UI5 language assistant to add building block table to a custom section XML fragment.
 
-(1) In the app studio open file ![](./images/image2.png).
+(1) In the SAP Business Application Studio open file ![](./images/image2.png).
 
 Add a UI.LineItem annotation at the the end of the file.
 You can use the CAP CDS LSP support for annotation modelling by pressing keys ctrl+space (Mac OS: cmd+space) and filter the available LSP menu entries (choose DataField annotations).

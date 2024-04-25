@@ -96,7 +96,7 @@ You can use the input field for filtering the available properties.\
 
 ![](./images/image37.png)
 
-(29) Select ![](./images/image41.png).
+(29) Select ![](./images/image41.png). Make sure to choose that referential constraint property and not the navigaton property **to_Agency/AgencyID**.
 
 ![](./images/image40.png)
 

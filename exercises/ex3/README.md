@@ -74,7 +74,7 @@ Please note that the table building block is located in the dynamic page content
 
 We now need to add some controller code for setting the filter status value and for the filter changed event handler.
 
-(7) Open file **app/managetravels/webapp/est/main/Main.controller.ts**
+(7) Open file **app/managetravels/webapp/ext/main/Main.controller.ts**
 
 (8) Add the following imports to the import section.
 ```ts 
@@ -88,13 +88,13 @@ Method **triggerSearch** makes sure that load is triggered on start of the app.
 
 ```ts
     public onAfterRendering(): void {
-        const filterBar = this.byId("FilterBar") as FilterBar,
-        view = this.getView(),
-        mFBConditions = new JSONModel({
-            filtersTextInfo: filterBar.getActiveFiltersText()
-        });
+        const filterBar = this.byId("FilterBar") as unknown as FilterBar,
+            view = this.getView(),
+            mFBConditions = new JSONModel({
+                filtersTextInfo: filterBar.getActiveFiltersText()
+            });
         if (view) {
-            view.setModel(mFBConditions, "fbConditions");  
+            view.setModel(mFBConditions, "fbConditions");
         };
         filterBar.triggerSearch();
     }
@@ -115,13 +115,13 @@ Method **triggerSearch** makes sure that load is triggered on start of the app.
 
 (13) Add the following handler function **onFiltersChanged** as shown in the screenshot below. In the handler function, property **filterTextInfo** is set every time the filter has been changed.
 ```ts
-    public onFiltersChanged(event: Event) : void {
-        const filterBar = event.getSource() as FilterBar;
-            const mFBConditions = filterBar.getModel("fbConditions");
-            if (mFBConditions instanceof JSONModel) {
-                mFBConditions.setProperty("/filtersTextInfo", filterBar.getActiveFiltersText());
-            }
-    }        
+    public onFiltersChanged(event: Event): void {
+        const filterBar = this.byId("FilterBar") as unknown as FilterBar;
+        const mFBConditions = this.getView()?.getModel("fbConditions");
+        if (mFBConditions instanceof JSONModel) {
+            mFBConditions.setProperty("/filtersTextInfo", filterBar.getActiveFiltersText());
+        }
+    }       
 ```
 ![](./images/tsimage11.png)
 
@@ -148,7 +148,7 @@ The target design of the app sketches an overview on open travels with a high to
 ![](./images/image12.png)
 
 Switch back to the Application Studio.\
-(19) Open file **app/managetravels/webapp/i18n.properties** and add the following text keys :
+(19) Open file **app/managetravels/webapp/i18n/i18n.properties** and add the following text keys :
 
 ```js
 HighestPrice=Open Travels Highest Total Price (Thousands)
