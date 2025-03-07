@@ -7,15 +7,14 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@sap/cds": ">=7.0.0",
-    "@sap/xssec": "^3.2.7",
-    "express": "^4",
-    "hdb": "^0.19.1",
-    "passport": "^0.6.0"
+    "@cap-js/hana": "^1",
+    "@sap/cds": ">=8.4.0",
+    "@sap/xssec": "^4",
+    "express": "^4"
   },
   "devDependencies": {
     "axios": "^1",
-    "cds-plugin-ui5": "^0.7.4",
+    "cds-plugin-ui5": "^0.12.0",
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
