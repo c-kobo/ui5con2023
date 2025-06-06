@@ -22,39 +22,17 @@ Choose the corresponding list entry.
 
 (3) Click **Start**.
 
-![](./images/image3.png)
+![](./images/2025-06-06_15-21-51.png)
 
 (4) In the wizard step **Template Selection**, click on the tile **Custom Page**, then click next (5).
 
-![](./images/image5.png)
+![](./images/2025-06-06_15-22-29.png)
 
-(6) In the wizard step **Datasource and Service Selection**, open the dropdown list.
+(6) In the wizard step **Datasource and Service Selection**, select **Use a Local CAP Project**.\
+Choose CAP Project **ui5con2023** and select OData service **TravelService (Node.js)**.\
+Click **Next**.
 
-![](./images/image9.png)
-
-(7)  Select **Use a Local CAP Project**.
-
-![](./images/image11.png)
-
-(8)  Click the **Browse for folder** icon to select the **CAP project folder path**.
-
-![](./images/image13.png)
-
-(9) Select folder **ui5con2023** and click ![Open](./images/image16.png).
-
-![](./images/image15.png)
-
-(10) Open the **OData service** dropdown.
-
-![](./images/image17.png)
-
-(11) Select **TravelService (Node.js)**
-
-![](./images/image18.png)
-
-(12) Click **Next**.
-
-![](./images/image20.png)
+![](./images/2025-06-06_16-10-36.png)
 
 (13)  In the wizard step **Entity Selection**, open drop-down **Main Entity**, and select **Travel.** Click ![](./images/image8.png).
 
@@ -71,15 +49,14 @@ In the wizard step **Project Attributes**, add the following attributes to the a
 - **Application Namespace**: sap.fe.cap\
 (namespace has to match exactly for some of the subsequent exercises to work properly)
 
-- **Minimum SAPUI5 version**: Choose version 1.120.11\
+- **Minimum SAPUI5 version**: Choose version 1.133.1\
  (This is required for some of the subsequent exercises to work properly)
 
-- Select **Configure Advanced Options**
-  - Select **Enable TypeScript(Experimental)**
+- Select Select **Enable TypeScript**
 
 (14) Click ![](./images/image24.png).
 
-![](./images/image23.png)
+![](./images/2025-06-06_15-15-08.png)
 
 This will start the app generation.\
 When finished, you can review the generated artifacts in the **Explorer** pane of SAP Business Application Studio.\
@@ -87,7 +64,7 @@ The generated artifacts are located in folder **app/managetravels** (the path re
 
 (15) Click **Open Page Map** on tab **Application Information** that is automatically displayed after app generation.
 
-![](./images/image25.png)
+![](./images/2025-06-06_16-21-49.png)
 
 (16) On the page map a Custom Page tile is shown. Click icon **Navigate to source code** ![](./images/image28.png).
 
@@ -106,11 +83,11 @@ The custom page is configured as the default starting page in the application ma
 
 The requirements for TypeScript enablement in this project setup are an NPM workspace configured in order to have the app project linked and managed from the root package. Furthermore, the added [cds-plugin-ui5](https://www.npmjs.com/package/cds-plugin-ui5) devDependency acts as a CAP server CDS plugin which enables the integration of UI5 tooling based projects into the CAP server via corresponding express middlewares.
 
-![](./images/dependencies.png)
+![](./images/2025-06-06_16-24-57.png)
 
-The app-specific package.json defines plugins for the SAPUI5 type definitions that can be imported into TypeScript based custom extension handlers and controllers. The UI5 Tooling transpile middleware and the corresponding transpile task in file ui5.yaml takes care of transpiling TypeScript code to ES5 using a babel configuration.
+The app-specific package.json defines plugins for the SAPUI5 type definitions that can be imported into TypeScript based custom extension handlers and controllers. The UI5 Tooling transpile middleware and the corresponding transpile task in file ui5.yaml takes care of transpiling TypeScript code to ES5.
 
-![](./images/appDependencies.png)
+![](./images/2025-06-06_17-15-09.png)
 
 ## Exercise 1.2 Starting the App
 
@@ -129,7 +106,7 @@ If **cds watch** is already running in a terminal, please end it by pressing key
 
 If the tab is closed, you can open it again by selecting the Fiori Tools icon in the side bar and then the Application Information icon.
 
-![](./images/applicationinfo.png)
+![](./images/2025-06-06_16-29-54.png)
 
 This opens a dropdown at the top offering all **cds run** and **cds watch** based scripts maintained in the scripts section of file **package.json**.\
 (19) Select npm script **watch-managetravels** 

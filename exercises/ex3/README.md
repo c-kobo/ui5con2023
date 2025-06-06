@@ -50,7 +50,7 @@ xmlns:f="sap.f"
             <f:DynamicPageHeader id="_IDGenDynamicPageHeader1" pinnable="true">
                 <VBox id="_IDGenVBox1">
                     <macros:FilterBar 
-                        metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" 
+                        metaPath="/Travel/@com.sap.vocabularies.UI.v1.SelectionFields#filterBarMacro" 
                         id="FilterBar" 
                         filterChanged=".onFiltersChanged" />
                 </VBox>
@@ -61,7 +61,7 @@ xmlns:f="sap.f"
             id="myTable" 
             filterBar="FilterBar"
             readOnly="true"
-            metaPath="@com.sap.vocabularies.UI.v1.LineItem" />
+            metaPath="/Travel/@com.sap.vocabularies.UI.v1.LineItem#tableMacro" />
         </f:content>
     </f:DynamicPage>
 ```
